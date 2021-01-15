@@ -73,13 +73,6 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:textSize="16sp"
-                    android:text="Հարգելի՛ բարեկամ, այս հարցման նպատակն է հավաքագրել Արցախյան հայրենական պատերազմի ընթացքում տուժած արցախցիների վերաբերյալ հնարավորինս ճշգրիտ տեղեկություններ՝ տվյալների բազա ստեղծելու և տուժածների իրավունքների հետագա պաշտպանություն և սոցիալական աջակցություն ապահովելու համար։ Ձեր մասնակցությունն այս հարցմանն անհրաժեշտ է և շատ կարևոր։" />
-
-                <TextView
                     style="@style/InputHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -129,14 +122,6 @@
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ստորև բերված հարցերի միջոցով, խնդրում ենք նկարագրեք Ձեր կյանքն ու աշխատանքային գործունեությունը Արցախում մինչև պատերազմը"
-                    android:textStyle="bold|italic" />
 
                 <TextView
                     style="@style/InputHeaderStyle"

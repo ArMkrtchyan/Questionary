@@ -8,6 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
@@ -15,31 +16,244 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24" />
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/next"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/stroke_background"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clipToPadding="false"
             android:layout_marginTop="?attr/actionBarSize"
             android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent="0.9">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="true"
+                android:clipToPadding="false"
+                android:background="@color/white"
                 android:paddingBottom="25dp">
 
-
-                <Button
-                    android:id="@+id/next"
-                    style="@style/MyBtnStyle"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:text="Խմբագրել"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_background"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:elevation="8dp"
+                    android:padding="15dp"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Հեռախոս" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text="Օր-կ +37455555555"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Ամսաթիվ" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 21.07.1992"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="ԱԱՀ " />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" Պողոս Պողոսի Պողոսյան"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Ծննդյան ամսաթիվ" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 21.07.1992"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Որտեղ եք ծնվել" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" ԱՀ, ք․ Ստեփանակարտ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Ասացեք խնդրեմ, ո՞ր բնակավայրում էիք բնակվում մինչ պատերազմը" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" ԱՀ, ք․ Ստեփանակարտ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Նշեք Ձեր հասցեն Արցախում" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" ԱՀ, ք․ Ստեփանակարտ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Որքա՞ն ժամանակ եք բնակվել այդ բնակավայրում" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 3 տարի 4 ամիս"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Քանի՞ հոգուց է բաղկացած Ձեր ընտանիքը:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 5 հոգուց"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Նշվածներից քանի՞սն են արական սեռի ներկայացուցիչ:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 3 հոգի"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Նշվածներից քանի՞սն են անչափահաս (18 տարեկանը չլրացած):" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 1 հոգի"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Ձեր ընտանիքում քանի՞ սերունդ է ապրում:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

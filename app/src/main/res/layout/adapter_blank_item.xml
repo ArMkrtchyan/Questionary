@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="blank"
+            type="com.example.questionaryartsakh.Blank" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +17,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/btn_background"
+        android:background="@drawable/rounded_background"
         android:backgroundTint="@color/white"
         android:elevation="8dp">
 
@@ -22,14 +26,14 @@
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
             android:layout_marginTop="10dp"
-            android:background="#000000"
+            android:background="@color/colorPrimaryDisabled"
             app:layout_constraintTop_toBottomOf="@id/date" />
 
         <View
             android:id="@+id/line2"
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
-            android:background="#000000"
+            android:background="@color/colorPrimaryDisabled"
             app:layout_constraintTop_toBottomOf="@id/place" />
 
         <TextView
@@ -50,8 +54,8 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
             android:text="21.07.1992"
             android:textColor="#818080"
             android:textSize="12sp"
@@ -64,11 +68,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:padding="10dp"
-            android:text="Թերի լրացված"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:status="@{blank.status}"
+            tools:text="Լրացված" />
 
 
         <TextView
@@ -121,7 +126,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/btn_background"
+            android:background="@{blank.status!=3 ? @drawable/btn_background : @drawable/btn_background_disabled }"
+            android:enabled="@{blank.status!=3}"
             android:gravity="center"
             android:padding="10dp"
             android:text="Խմբագրել"
@@ -130,14 +136,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/send"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line2" />
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            tools:background="@drawable/btn_background" />
 
         <TextView
             android:id="@+id/send"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/btn_background_disabled"
+            android:background="@{blank.status==2 ? @drawable/btn_background : @drawable/btn_background_disabled }"
+            android:enabled="@{blank.status==2}"
             android:gravity="center"
             android:padding="10dp"
             android:text="Ուղարկել"
@@ -146,6 +154,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/edit"
-            app:layout_constraintTop_toBottomOf="@id/line2" />
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            tools:background="@drawable/btn_background" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

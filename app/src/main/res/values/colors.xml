@@ -6,5 +6,9 @@
     <color name="colorPrimaryDisabled">#80FF3D00</color>
     <color name="input_solid">#1AFF3D00</color>
     <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="sent">#26AC2C</color>
+    <color name="fill">#FF3D00</color>
+    <color name="not_fill">#7F7F7F</color>
 
 </resources>

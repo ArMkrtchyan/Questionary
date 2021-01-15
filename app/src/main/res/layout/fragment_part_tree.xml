@@ -29,21 +29,225 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintWidth_percent="0.9">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="true"
+                android:orientation="vertical"
                 android:paddingBottom="25dp">
 
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Հեռախոս" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ +37455555555"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ամսաթիվ" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 21.07.1992"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="ԱԱՀ " />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ծննդյան ամսաթիվ" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 21.07.1992"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Որտեղ եք ծնվել" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ասացեք խնդրեմ, ո՞ր բնակավայրում էիք բնակվում մինչ պատերազմը" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Նշեք Ձեր հասցեն Արցախում" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Որքա՞ն ժամանակ եք բնակվել այդ բնակավայրում" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 3 տարի 4 ամիս"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Քանի՞ հոգուց է բաղկացած Ձեր ընտանիքը:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 5 հոգուց"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Նշվածներից քանի՞սն են արական սեռի ներկայացուցիչ:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 3 հոգի"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Նշվածներից քանի՞սն են անչափահաս (18 տարեկանը չլրացած):" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 1 հոգի"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ձեր ընտանիքում քանի՞ սերունդ է ապրում:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ 3 սերունդ"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/next"
+                    style="@style/MyBtnStyle"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    style="@style/MyBtnStyle"
-                    android:text="@string/next"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/save"
                     app:layout_constraintBottom_toBottomOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

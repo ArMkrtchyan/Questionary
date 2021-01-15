@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.questionaryartsakh.databinding.AdapterBlankItemBinding
 
-class AdapterBlanks(val edit: (Blank) -> Unit, val send: (Blank) -> Unit, val delete: (Blank) -> Unit, val show: (Blank) -> Unit) :
+class AdapterBlanks(val fEdit: (Blank) -> Unit, val fSend: (Blank) -> Unit, val fDelete: (Blank) -> Unit, val fShow: (Blank) -> Unit) :
     ListAdapter<Blank, AdapterBlanks.BlankViewHolder>(object : DiffUtil.ItemCallback<Blank>() {
         override fun areItemsTheSame(oldItem: Blank, newItem: Blank): Boolean {
             return oldItem.id == newItem.id
@@ -25,9 +25,13 @@ class AdapterBlanks(val edit: (Blank) -> Unit, val send: (Blank) -> Unit, val de
     }
 
     override fun onBindViewHolder(holder: BlankViewHolder, position: Int) {
-        holder.mBinding.root.setOnClickListener { show.invoke(getItem(position)) }
-        holder.mBinding.send.setOnClickListener { send.invoke(getItem(position)) }
-        holder.mBinding.edit.setOnClickListener { edit.invoke(getItem(position)) }
-        holder.mBinding.delete.setOnClickListener { delete.invoke(getItem(position)) }
+        holder.mBinding.apply {
+            blank = getItem(position)
+            root.setOnClickListener { fShow.invoke(getItem(position)) }
+            send.setOnClickListener { fSend.invoke(getItem(position)) }
+            edit.setOnClickListener { fEdit.invoke(getItem(position)) }
+            delete.setOnClickListener { fDelete.invoke(getItem(position)) }
+        }
+
     }
 }

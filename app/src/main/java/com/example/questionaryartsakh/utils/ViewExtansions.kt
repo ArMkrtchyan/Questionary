@@ -1,7 +1,10 @@
 package com.example.questionaryartsakh.utils
 
 import android.view.View
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import com.example.questionaryartsakh.R
 
 fun View.invisible() {
     visibility = View.INVISIBLE
@@ -24,4 +27,21 @@ fun visibleIf(anyView: View, show: Boolean) {
     if (show) anyView.visible() else anyView.gone()
 }
 
+@BindingAdapter("app:status")
+fun setStatus(anyView: TextView, id: Int) {
+    when (id) {
+        1 -> {
+            anyView.text = "Թերի լրացված"
+            anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.not_fill))
+        }
+        2 -> {
+            anyView.text = "Լրացված"
+            anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.fill))
+        }
+        3 -> {
+            anyView.text = "Ուղարկված"
+            anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.sent))
+        }
+    }
+}
 
