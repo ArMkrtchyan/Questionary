@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/partOneFragment"
+        android:name="com.example.questionaryartsakh.fragments.PartOneFragment"
+        android:label="PartOneFragment"
+        tools:layout="@layout/fragment_part_one">
+        <action
+            android:id="@+id/action_partOneFragment_to_partTwoFragment"
+            app:destination="@id/partTwoFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/partTwoFragment"
+        android:name="com.example.questionaryartsakh.fragments.PartTwoFragment"
+        android:label="PartTwoFragment"
+        tools:layout="@layout/fragment_part_two">
+        <action
+            android:id="@+id/action_partTwoFragment_to_partTreeFragment"
+            app:destination="@id/partTreeFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/partTreeFragment"
+        android:name="com.example.questionaryartsakh.fragments.PartTreeFragment"
+        android:label="PartTreeFragment"
+        tools:layout="@layout/fragment_part_tree" />
+    <fragment
+        android:id="@+id/homeFragment"
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.questionaryartsakh.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_partOneFragment"
+            app:destination="@id/partOneFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+</navigation>
