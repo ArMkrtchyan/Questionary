@@ -35,14 +35,45 @@
         android:id="@+id/partTreeFragment"
         android:name="com.example.questionaryartsakh.fragments.PartTreeFragment"
         android:label="PartTreeFragment"
-        tools:layout="@layout/fragment_part_tree" />
+        tools:layout="@layout/fragment_part_tree">
+        <action
+            android:id="@+id/action_partTreeFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out"/>
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        tools:layout="@layout/fragment_home"
         android:name="com.example.questionaryartsakh.fragments.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_partOneFragment"
+            app:destination="@id/partOneFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+        <action
+            android:id="@+id/action_homeFragment_to_showBlankFragment"
+            app:destination="@id/showBlankFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/showBlankFragment"
+        android:name="com.example.questionaryartsakh.fragments.ShowBlankFragment"
+        android:label="ShowBlankFragment"
+        tools:layout="@layout/fragment_show_blank">
+        <action
+            android:id="@+id/action_showBlankFragment_to_partOneFragment"
             app:destination="@id/partOneFragment"
             app:enterAnim="@anim/fragment_anim_fade_in"
             app:exitAnim="@anim/fragment_anim_fade_out"
