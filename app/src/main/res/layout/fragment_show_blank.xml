@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -43,9 +43,9 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
             android:background="@color/white"
             android:clipToPadding="false"
-            android:layout_marginTop="?attr/actionBarSize"
             android:fillViewport="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -53,22 +53,22 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="false"
                 android:background="@color/white"
+                android:clipToPadding="false"
                 android:paddingBottom="25dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/rounded_background"
-                    android:clipToPadding="false"
-                    android:orientation="vertical"
-                    android:elevation="8dp"
-                    android:padding="15dp"
                     android:backgroundTint="@color/white"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -248,10 +248,558 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:padding="5dp"
                         android:text=" 3 սերունդ"
                         android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ընտանիքում կան`" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ձեր կրթությունը`" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ձեր մասնագիտությունը`" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Որքանո՞վ եք տիրապետում հետևյալ լեզուներին:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Կարո՞ղ եք Դուք արդյոք համակարգչով աշխատել:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Կարո՞ղ եք Դուք արդյոք ավտոմեքենա վարել" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Մինչ պատերազմ Դուք արդյոք աշխատո՞ւմ էիք։" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Որտե՞ղ էիք աշխատում:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ո՞ր բնագավառում էիք Դուք աշխատում:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ձեր աշխատանքային կարգավիճակը/պաշտոնը:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Որքա՞ն ժամանակ էիք աշխատում" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ստորև բերված դատողություններից ո՞րն է լավագույնս համապատասխանում Ձեր աշխատանքային կարիերայի նկարագրման համար: Մասնագիտական գործունեության ընթացքում ես՝" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Իսկ որքա՞ն էր կազմում Ձեր ընտանիքի ամսական միջին եկամուտը՝" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Իսկ որքա՞ն էր կազմում անձամբ Ձեր եկամուտը:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ստորև բերվածներից որո՞նք էին Ձեր տնային տնտեսության եկամտի աղբյուրները:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ինչպե՞ս կբնութագրեք Ձեր/Ձեր ընտանիքի նյութական ապահովվածության մակարդակը մինչ պատերազմ:" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Մինչ պատերազմ Դուք բնակվում էիք:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ի՞նչ սեփականության տեր եք կամ համասեփականատեր:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Մինչ պատերազմ ունեի՞ք արդյոք`" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ե՞րբ լքեցիք Ձեր բնակության վայրը" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ընտանիքի անդամներից քանի՞սն են տեղափոխվել ՀՀ" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ընտանիքի անդամներից քանի՞սն են մնացել Արցախում" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ընտանիքի անդամներից քանի՞սն են զոհվել" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ո՞րն էր Ձեր բնակավայրը լքելու հիմնական պատճառը /նշել բոլոր վերաբերելի տարբերակները" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ինչպե՞ս կազմակերպվեց Ձեր/Ձեր ընտանիքի տեղափոխումը ՀՀ:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ասացեք խնդրեմ, որտեղ եք հիմա բնակվում,  բնակավայրի անվանումը՝" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Պատերազմից հետո  Հայաստանում Դուք բնակվում եք:" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ինչ եք կարողացել բերել Ձեր հետ տեղափոխվելիս՝ " />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Անհրաժեշտ իրերից ի՞նչ ունեք այսօր ձեր բնակության վայրում`" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ստացել եք արդյոք որևէ նյութական աջակցություն՝ (Նշել բոլոր հնարավոր պատասխանները)" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Նոյեմբերի 9-10-ին ստորագրված փաստաղթի համաձայն Ձեր բնակավայրը" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ձեր ունեցած սեփականությունից ի՞նչ է պահպանվել կանգուն վիճակում, ինչն եք կորցրել" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Որտե՞ղ եք պլանավորում բնակվել մոտ ապագայում " />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ինչո՞վ եք պլանավորում զբաղվել մոտ ապագայում" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ձեր անձնագիրը" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ամուսնական կարգավիճակը՝" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Ձեր տարիքը" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Հարցվողի սեռը" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Լրացուցիչ նշումներ`" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text=" 3 սերունդ"
+                        android:textSize="16sp" />
+
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -242,6 +242,38 @@
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
 
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ընտանիքում կան`" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ձեր կրթությունը`" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ձեր մասնագիտությունը`" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
+                    android:padding="16dp"
+                    android:textColorHint="#706C6C"
+                    android:textSize="16sp" />
+
                 <Button
                     android:id="@+id/next"
                     style="@style/MyBtnStyle"

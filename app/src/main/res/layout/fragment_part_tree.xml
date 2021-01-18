@@ -17,8 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_constraintTop_toTopOf="parent"
-            app:title="Page 3"
-            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24" />
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+            app:title="Page 3" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
@@ -36,45 +36,14 @@
                 android:orientation="vertical"
                 android:paddingBottom="25dp">
 
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Հեռախոս" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ +37455555555"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Ամսաթիվ" />
+                    android:text="Ե՞րբ լքեցիք Ձեր բնակության վայրը" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 21.07.1992"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="ԱԱՀ " />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -91,14 +60,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Ծննդյան ամսաթիվ" />
+                    android:text="Ընտանիքի անդամներից քանի՞սն են տեղափոխվել ՀՀ" />
+
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 21.07.1992"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
@@ -108,14 +78,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Որտեղ եք ծնվել" />
+                    android:text="Ընտանիքի անդամներից քանի՞սն են մնացել Արցախում" />
+
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
@@ -125,14 +96,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Ասացեք խնդրեմ, ո՞ր բնակավայրում էիք բնակվում մինչ պատերազմը" />
+                    android:text="Ընտանիքի անդամներից քանի՞սն են զոհվել" />
+
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
@@ -142,14 +114,106 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Նշեք Ձեր հասցեն Արցախում" />
+                    android:text="Ո՞րն էր Ձեր բնակավայրը լքելու հիմնական պատճառը /նշել բոլոր վերաբերելի տարբերակները" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ինչպե՞ս կազմակերպվեց Ձեր/Ձեր ընտանիքի տեղափոխումը ՀՀ:" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ասացեք խնդրեմ, որտեղ եք հիմա բնակվում,  բնակավայրի անվանումը՝" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Պատերազմից հետո  Հայաստանում Դուք բնակվում եք:" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ինչ եք կարողացել բերել Ձեր հետ տեղափոխվելիս՝ " />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Անհրաժեշտ իրերից ի՞նչ ունեք այսօր ձեր բնակության վայրում`" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ստացել եք արդյոք որևէ նյութական աջակցություն՝ (Նշել բոլոր հնարավոր պատասխանները)" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Նոյեմբերի 9-10-ին ստորագրված փաստաղթի համաձայն Ձեր բնակավայրը" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ձեր ունեցած սեփականությունից ի՞նչ է պահպանվել կանգուն վիճակում, ինչն եք կորցրել" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Որտե՞ղ եք պլանավորում բնակվել մոտ ապագայում " />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ինչո՞վ եք պլանավորում զբաղվել մոտ ապագայում" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ձեր անձնագիրը" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ամուսնական կարգավիճակը՝" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ձեր տարիքը" />
+
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
@@ -159,82 +223,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Որքա՞ն ժամանակ եք բնակվել այդ բնակավայրում" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 տարի 4 ամիս"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:text="Հարցվողի սեռը" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Քանի՞ հոգուց է բաղկացած Ձեր ընտանիքը:" />
+                    android:text="Լրացուցիչ նշումներ`" />
+
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 5 հոգուց"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Նշվածներից քանի՞սն են արական սեռի ներկայացուցիչ:" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 հոգի"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Նշվածներից քանի՞սն են անչափահաս (18 տարեկանը չլրացած):" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 1 հոգի"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ձեր ընտանիքում քանի՞ սերունդ է ապրում:" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 սերունդ"
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
