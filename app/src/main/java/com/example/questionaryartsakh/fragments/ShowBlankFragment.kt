@@ -10,6 +10,7 @@ import com.example.questionaryartsakh.MainActivity
 import com.example.questionaryartsakh.databinding.FragmentShowBlankBinding
 
 class ShowBlankFragment : Fragment() {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return FragmentShowBlankBinding.inflate(inflater, container, false).apply {

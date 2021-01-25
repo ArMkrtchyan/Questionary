@@ -11,6 +11,7 @@ import com.example.questionaryartsakh.databinding.DialogDeleteBinding
 import com.example.questionaryartsakh.databinding.DialogSendBinding
 
 object DialogUtil {
+
     fun deleteDialog(context: Activity, description: String, confirm: () -> Unit) {
         val dialogBuilder = AlertDialog.Builder(context)
         val dialogBinding = DialogDeleteBinding.inflate(LayoutInflater.from(context), null, false).apply {

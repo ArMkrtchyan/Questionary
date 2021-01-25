@@ -4,7 +4,9 @@ import android.app.Application
 import com.example.questionaryartsakh.database.BlankDB
 
 class BlankApp : Application() {
+
     companion object {
+
         private lateinit var instance: BlankApp
         fun getInstance() = instance
     }

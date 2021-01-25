@@ -24,7 +24,6 @@ class BlankRepository {
         }.flowOn(Dispatchers.IO))
     }
 
-
     suspend fun findAllBlanks(mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
         mFlow(flow {
             //   emit(BlanksMapper.BlankEntitiesToBlanks(BlankDao.getAllBlanks()))

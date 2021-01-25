@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:gravity="center"
-            android:text="ՀԱՐՑԱԹԵՐԹ"
+            android:text="@string/app_name"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold|italic"
@@ -46,14 +46,10 @@
                     android:text="Հեռախոս" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ +37455555555"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ +37455555555" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -63,14 +59,10 @@
                     android:text="Ամսաթիվ" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 21.07.1992"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 21.07.1992" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -80,14 +72,10 @@
                     android:text="ԱԱՀ " />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -97,14 +85,14 @@
                     android:text="Ծննդյան ամսաթիվ" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 21.07.1992"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+
+
+                    android:hint="Օր-կ՝ 21.07.1992" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -114,14 +102,12 @@
                     android:text="Որտեղ եք ծնվել" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -131,14 +117,12 @@
                     android:text="Ասացեք խնդրեմ, ո՞ր բնակավայրում էիք բնակվում մինչ պատերազմը" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -148,14 +132,12 @@
                     android:text="Նշեք Ձեր հասցեն Արցախում" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -165,14 +147,12 @@
                     android:text="Որքա՞ն ժամանակ եք բնակվել այդ բնակավայրում" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 տարի 4 ամիս"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 3 տարի 4 ամիս" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -182,14 +162,12 @@
                     android:text="Քանի՞ հոգուց է բաղկացած Ձեր ընտանիքը:" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 5 հոգուց"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 5 հոգուց" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -199,14 +177,12 @@
                     android:text="Նշվածներից քանի՞սն են արական սեռի ներկայացուցիչ:" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 հոգի"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 3 հոգի" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -216,14 +192,12 @@
                     android:text="Նշվածներից քանի՞սն են անչափահաս (18 տարեկանը չլրացած):" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 1 հոգի"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 1 հոգի" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -233,14 +207,12 @@
                     android:text="Ձեր ընտանիքում քանի՞ սերունդ է ապրում:" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 սերունդ"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 3 սերունդ" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -249,12 +221,125 @@
                     android:layout_marginTop="20dp"
                     android:text="Ընտանիքում կան`" />
 
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_toStartOf="@id/invalid_layout"
+                        android:text="Հաշմանդամներ`"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/invalid_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/invalid_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="Այո" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/invalid_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:text="Ոչ" />
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/invalid_layout"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_toStartOf="@id/invalid_layout"
+                        android:text="Թոշակառուներ`"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/toshak_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/invalid_layout"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/toshak_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:text="Այո" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/toshak_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            
+                            android:text="Ոչ" />
+                    </RadioGroup>
+
+                </RelativeLayout>
+
                 <TextView
                     style="@style/InputHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:text="Ձեր կրթությունը`" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        
+                        android:text="Միջնակարգ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Միջնակարգ մասնագիտական" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Թերի բարձրագույն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ուսանող" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Բարձրագույն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Գիտական աստիճան (գիտ.թեկնածու, դոկտոր և այլն)" />
+                </RadioGroup>
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -265,14 +350,331 @@
 
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Որքանո՞վ եք տիրապետում հետևյալ լեզուներին:" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/arm"
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Հայերեն`"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/languages_layout_arm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/arm"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_good_arm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Լավ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_middle_arm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            
+                            android:text="Միջին" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_bad_arm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Վատ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_dont_arm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ընդհանրապես չգիտեմ" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/rus"
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_arm"
+                        android:layout_marginTop="8dp"
+                        android:text="Ռուսերեն`"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/languages_layout_rus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rus"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_good_rus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Լավ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_middle_rus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            
+                            android:text="Միջին" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_bad_rus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Վատ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_dont_rus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ընդհանրապես չգիտեմ" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/eng"
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_rus"
+                        android:layout_marginTop="8dp"
+                        android:text="Անգլերեն`"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <RadioGroup
+                        android:id="@+id/languages_layout_eng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eng"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_good_eng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Լավ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_middle_eng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            
+                            android:text="Միջին" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_bad_eng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Վատ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_dont_eng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="Ընդհանրապես չգիտեմ" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/other"
+                        style="@style/InputHeaderStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_eng"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:text="Այլ (նշել) `"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/other_1"
+                        style="@style/InputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/other"
+                        android:hint="Օր-կ՝ Գերմաներեն" />
+
+                    <RadioGroup
+                        android:id="@+id/languages_layout_other_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/other_1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_good_other_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Լավ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_middle_other_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            
+                            android:text="Միջին" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_bad_other_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Վատ" />
+
+                    </RadioGroup>
+
+
+                    <EditText
+                        android:id="@+id/other_2"
+                        style="@style/InputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_other_1"
+                        android:hint="Օր-կ՝ Իսպաներեն" />
+
+                    <RadioGroup
+                        android:id="@+id/languages_layout_other_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/other_2"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_good_other_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Լավ" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_middle_other_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            
+                            android:text="Միջին" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/language_bad_other_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="16dp"
+                            android:text="Վատ" />
+                    </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Կարո՞ղ եք Դուք արդյոք համակարգչով աշխատել:" />
+
+                <RadioGroup
+                    android:id="@+id/computer_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/computer_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/computer_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Կարո՞ղ եք Դուք արդյոք ավտոմեքենա վարել" />
+
+                <RadioGroup
+                    android:id="@+id/driver_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/driver_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/driver_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:text="Ոչ" />
+                </RadioGroup>
 
                 <Button
                     android:id="@+id/next"

@@ -9,9 +9,7 @@ import androidx.navigation.findNavController
 import com.example.questionaryartsakh.MainActivity
 import com.example.questionaryartsakh.databinding.FragmentPartTwoBinding
 
-
 class PartTwoFragment : Fragment() {
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment

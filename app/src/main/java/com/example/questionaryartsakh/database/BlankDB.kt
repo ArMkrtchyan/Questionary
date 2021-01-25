@@ -9,9 +9,11 @@ import com.example.questionaryartsakh.database.entity.BlankEntity
 
 @Database(entities = [BlankEntity::class], version = 1, exportSchema = true)
 abstract class BlankDB : RoomDatabase() {
+
     abstract fun blankDao(): BlankDao
 
     companion object {
+
         @Volatile
         private var INSTANCE: BlankDB? = null
 

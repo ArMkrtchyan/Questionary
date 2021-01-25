@@ -18,7 +18,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-
 class HomeFragment : Fragment() {
 
     @ExperimentalCoroutinesApi

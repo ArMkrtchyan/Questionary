@@ -18,6 +18,7 @@ class AdapterBlanks(val fEdit: (Blank) -> Unit, val fSend: (Blank) -> Unit, val 
         }
 
     }) {
+
     class BlankViewHolder(val mBinding: AdapterBlankItemBinding) : RecyclerView.ViewHolder(mBinding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BlankViewHolder {

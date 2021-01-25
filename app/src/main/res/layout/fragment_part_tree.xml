@@ -36,6 +36,19 @@
                 android:orientation="vertical"
                 android:paddingBottom="25dp">
 
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ի՞նչ սեփականության տեր եք կամ համասեփականատեր:" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Մինչ պատերազմ ունեի՞ք արդյոք`" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
