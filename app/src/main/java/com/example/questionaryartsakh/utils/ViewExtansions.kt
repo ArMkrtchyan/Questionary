@@ -1,9 +1,11 @@
 package com.example.questionaryartsakh.utils
 
 import android.view.View
+import android.widget.EditText
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
+import androidx.databinding.InverseBindingAdapter
 import com.example.questionaryartsakh.R
 
 fun View.invisible() {
@@ -43,5 +45,17 @@ fun setStatus(anyView: TextView, id: Int) {
             anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.sent))
         }
     }
+}
+
+@BindingAdapter("android:text")
+fun EditText.bindAnyToString(value: Any?) {
+    value?.let {
+        setText(value.toString())
+    }
+}
+
+@InverseBindingAdapter(attribute = "android:text")
+fun EditText.getFloatFromBinding(): String {
+    return text.toString()
 }
 

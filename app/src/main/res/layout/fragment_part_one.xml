@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="blank"
+            type="com.example.questionaryartsakh.Blank" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,10 +48,12 @@
                     android:text="Հեռախոս" />
 
                 <EditText
+                    android:id="@+id/telephone"
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Օր-կ +37455555555" />
+                    android:hint="Օր-կ +37455555555"
+                    android:text="@{blank.telephone}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -60,7 +66,8 @@
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Օր-կ՝ 21.07.1992" />
+                    android:hint="Օր-կ՝ 21.07.1992"
+                    android:text="@={blank.date}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -73,7 +80,8 @@
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան" />
+                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
+                    android:text="@={blank.fullName}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -88,9 +96,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-
-
-                    android:hint="Օր-կ՝ 21.07.1992" />
+                    android:hint="Օր-կ՝ 21.07.1992"
+                    android:text="@={blank.dateOfBirthDay}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -105,7 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ" />
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:text="@={blank.birthPlace}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -120,7 +128,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ" />
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:text="@={blank.livingPlaceBeforeWar}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -135,7 +144,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ" />
+                    android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
+                    android:text="@={blank.addressInArcakh}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -150,7 +160,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 տարի 4 ամիս" />
+                    android:hint="Օր-կ՝ 3 տարի 4 ամիս"
+                    android:text="@={blank.livingTime}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -165,7 +176,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 5 հոգուց" />
+                    android:hint="Օր-կ՝ 5 հոգուց"
+                    android:text="@={blank.familyCount}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -180,7 +192,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 հոգի" />
+                    android:hint="Օր-կ՝ 3 հոգի"
+                    android:text="@={blank.familyMaleCount}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -195,7 +208,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 1 հոգի" />
+                    android:hint="Օր-կ՝ 1 հոգի"
+                    android:text="@={blank.familyUnder18Count}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -210,7 +224,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 3 սերունդ" />
+                    android:hint="Օր-կ՝ 3 սերունդ"
+                    android:text="@={blank.familyGenCount}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -247,13 +262,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
+                            android:checked="@={blank.familyMembers.invalid}"
                             android:text="Այո" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
                             android:id="@+id/invalid_no"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            
+                            android:checked="@={!blank.familyMembers.invalid}"
                             android:text="Ոչ" />
                     </RadioGroup>
 
@@ -282,13 +298,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
+                            android:checked="@={blank.familyMembers.toshakaru}"
                             android:text="Այո" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
                             android:id="@+id/toshak_no"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            
+                            android:checked="@={!blank.familyMembers.toshakaru}"
                             android:text="Ոչ" />
                     </RadioGroup>
 
