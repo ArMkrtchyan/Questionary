@@ -15,7 +15,7 @@ class PartTreeFragment : Fragment() {
         // Inflate the layout for this fragment
         return FragmentPartTreeBinding.inflate(inflater, container, false).apply {
             (activity as MainActivity).setSupportActionBar(toolbar)
-            next.setOnClickListener { view?.findNavController()?.navigate(PartTreeFragmentDirections.actionPartTreeFragmentToHomeFragment()) }
+            next.setOnClickListener { view?.findNavController()?.navigate(PartTreeFragmentDirections.actionPartTreeFragmentToPartFourFragment()) }
         }.root
     }
 

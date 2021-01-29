@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.PartOneFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_keyboard_backspace_24"
+            app:title="Page 4" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="true"
+                android:orientation="vertical"
+                android:paddingBottom="25dp">
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Ինչպե՞ս կբնութագրեք Ձեր/Ձեր ընտանիքի նյութական ապահովվածության մակարդակը մինչ պատերազմ:"
+                    android:textAllCaps="false" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Եկամուտները չէին բավարարում անգամ սննդի ծախսերը հոգալու համար" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Եկամուտները բավարար էին սնունդն ապահովելու համար, բայց հագուստ գնելը մեզ համար լուրջ խնդիր է" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Եկամուտները բավարար էին սնունդ և հագուստ ձեռք բերելու համար, բայց սառնարան կամ լվացքի մեքենա գնելը լուրջ խնդիր է" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Եկամուտները բավարար են կենցաղային տեխնիկա գնելու համար, բայց նոր ավտոմեքենա գնել չենք կարող " />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Եկամուտները բավարար են ամեն ինչի համար, բացի բնակարանի, ամառանոցի գնումից" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Կարող ենք ձեռք բերել գրեթե ամեն ինչ և անել խնայողություններ" />
+
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մինչ պատերազմ Դուք բնակվում էիք:"
+                    android:textAllCaps="false" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Ձեր սեփական բնակարանում/տանը " />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ծնողներիս, ամուսնուս/կնոջս, բարեկամներիս  բնակարանում/տանը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Վարձով բնակարանում/տանը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Հանրակացարանում" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Այլ պատասխան" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_other_1"
+                        android:hint="" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ի՞նչ սեփականության տեր եք կամ համասեփականատեր:" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Ավտոմեքենա"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ" />
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ավտոտնակ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քմ" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քանակ" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Բնակարան/տուն"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քմ" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քանակ" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ամառանոց"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քմ" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քանակ" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Սեփական ձեռնակություն"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քմ" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քանակ" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Տարածք"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քմ" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քանակ" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Բանկային հաշիվ/գումար"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ" />
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Բանկային ավանդ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Վարկ/հիփոթեկային վարկ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ" />
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ոսկեղեն/անտիկվարիատ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ" />
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Արժեթղթեր"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ" />
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Այլ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Սեփ-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Համա-տեր եմ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Չունեմ " />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մոտավոր արժեքը մինչև պատերազմը /ՀՀ դրամով/"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քմ" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:hint="Քանակ" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Մինչ պատերազմ ունեի՞ք արդյոք`" />
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Խոհանոցային կահույք"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Բազմոց, բազկաթոռներ, կահույք"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Սառնարան"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Լվացքի մեքենա"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Սպասք լվացող մեքենա"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Գունավոր հեռուստացույց"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="LCD հեռուստացույց"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Գազօջախ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Օդափոխիչ /կոնդիցիոներ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Թանկարժեք իրեր, ոսկեղեն"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, նորը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո, հինը" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Այլ՝"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/next"
+                    style="@style/MyBtnStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/next"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -37,15 +37,8 @@
         android:label="PartTreeFragment"
         tools:layout="@layout/fragment_part_tree">
         <action
-            android:id="@+id/action_partTreeFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:popUpTo="@id/homeFragment"
-            app:popUpToInclusive="true"
-            app:launchSingleTop="true"
-            app:enterAnim="@anim/fragment_anim_fade_in"
-            app:exitAnim="@anim/fragment_anim_fade_out"
-            app:popEnterAnim="@anim/fragment_anim_fade_in"
-            app:popExitAnim="@anim/fragment_anim_fade_out"/>
+            android:id="@+id/action_partTreeFragment_to_partFourFragment"
+            app:destination="@id/partFourFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -79,5 +72,43 @@
             app:exitAnim="@anim/fragment_anim_fade_out"
             app:popEnterAnim="@anim/fragment_anim_fade_in"
             app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/partFourFragment"
+        android:name="com.example.questionaryartsakh.fragments.PartFourFragment"
+        android:label="PartFourFragment"
+        tools:layout="@layout/fragment_part_four">
+        <action
+            android:id="@+id/action_partFourFragment_to_partFiveFragment"
+            app:destination="@id/partFiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/partFiveFragment"
+        android:name="com.example.questionaryartsakh.fragments.PartFiveFragment"
+        android:label="PartFiveFragment"
+        tools:layout="@layout/fragment_part_five">
+        <action
+            android:id="@+id/action_partFiveFragment_to_partSixFragment"
+            app:destination="@id/partSixFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/partSixFragment"
+        android:name="com.example.questionaryartsakh.fragments.PartSixFragment"
+        android:label="PartSixFragment"
+        tools:layout="@layout/fragment_part_six">
+        <action
+            android:id="@+id/action_partSixFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_anim_fade_in"
+            app:exitAnim="@anim/fragment_anim_fade_out"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/fragment_anim_fade_in"
+            app:popExitAnim="@anim/fragment_anim_fade_out"
+            app:popUpTo="@layout/fragment_home"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

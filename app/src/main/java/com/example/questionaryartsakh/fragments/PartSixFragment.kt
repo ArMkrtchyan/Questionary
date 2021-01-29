@@ -7,16 +7,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.questionaryartsakh.MainActivity
-import com.example.questionaryartsakh.databinding.FragmentPartOneBinding
+import com.example.questionaryartsakh.databinding.FragmentPartSixBinding
 
-class PartOneFragment : Fragment() {
+class PartSixFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return FragmentPartOneBinding.inflate(inflater, container, false).apply {
+        return FragmentPartSixBinding.inflate(inflater, container, false).apply {
             (activity as MainActivity).setSupportActionBar(toolbar)
-            next.setOnClickListener { view?.findNavController()?.navigate(PartOneFragmentDirections.actionPartOneFragmentToPartTwoFragment()) }
+            next.setOnClickListener { view?.findNavController()?.navigate(PartSixFragmentDirections.actionPartSixFragmentToHomeFragment()) }
         }.root
     }
-
 }

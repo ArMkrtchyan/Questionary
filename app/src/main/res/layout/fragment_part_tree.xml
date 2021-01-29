@@ -41,21 +41,292 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Ի՞նչ սեփականության տեր եք կամ համասեփականատեր:" />
+                    android:text="Ո՞ր բնագավառում էիք Դուք աշխատում:" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Բանկեր/ ֆինանսներ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Հաղորդակցություն, կապ/ ինֆորմացիոն տեխնոլոգիաներ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Շինարարություն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Մշակույթ/ արվեստ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Սպորտ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Կրթություն/ գիտություն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Կառավարություն/ քաղ. ծառայություն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ուժային կառույցներ (ՊՆ, Ոստիկանություն)" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Առողջապահություն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Արդյունաբերություն" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ԶԼՄ և գովազդ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Առևտուր/ սպասարկում" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Տրանսպորտ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Կոմունալ ծառայություններ" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Կենցաղային սպասարկում" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ծառայություններ (ռեստորաններ, սրճարաններ)" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Գյուղատնտեսություն" />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Այլ պատասխան" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_other_1"
+                        android:hint="" />
+                </RadioGroup>
 
                 <TextView
                     style="@style/InputHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Մինչ պատերազմ ունեի՞ք արդյոք`" />
+                    android:text="Ձեր աշխատանքային կարգավիճակը/պաշտոնը:" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Բարձր կարգի ղեկավար/ տնօրեն, փոխտնօրեն" />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Միջին կարգի ղեկավար/ մենեջեր, բաժնի վարիչ" />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Որակավորված մասնագետ" />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Գրասենյակային աշխատող" />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ծառայություններ մատուցող (վաճառող, մատուցող, վարսավիր եւ այլն)" />
+
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Չորակավորված աշխատող/ բանվոր" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Այլ պատասխան" />
+
+                    <EditText
+                        style="@style/InputStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languages_layout_other_1"
+                        android:hint="" />
+                </RadioGroup>
 
                 <TextView
                     style="@style/InputHeaderStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Ե՞րբ լքեցիք Ձեր բնակության վայրը" />
+                    android:text="Որքա՞ն ժամանակ էիք աշխատում" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="1.Տվյալ բնագավառում `"
+                    android:textAllCaps="false"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/volort"
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="2.Տվյալ կազմակերպությունում "
+                    android:textAllCaps="false"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/company"
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="3.Տվյալ պաշտոնում"
+                    android:textAllCaps="false"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/pashton"
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Ստորև բերված դատողություններից ո՞րն է լավագույնս համապատասխանում Ձեր աշխատանքային կարիերայի նկարագրման համար: Մասնագիտական գործունեության ընթացքում ես՝" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="կտրուկ աշխատանքային առաջընթաց եմ ունեցել" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="աստիճանաբար աշխատանքային առաջընթաց եմ ունեցել" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="աշխատանքային առաջընթաց չեմ ունեցել" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="աստիճանաբար աշխատանքային կարիերայի անկում եմ ապրել" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="կտրուկ աշխատանքային կարիերայի անկում եմ ապրել" />
+
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Իսկ որքա՞ն էր կազմում Ձեր ընտանիքի ամսական միջին եկամուտը՝" />
+
+
+                <EditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Օր-կ՝ 150000 dram" />
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Իսկ որքա՞ն էր կազմում անձամբ Ձեր եկամուտը:" />
 
 
                 <EditText
@@ -63,7 +334,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
+                    android:hint="Օր-կ՝ 80000dram"
                     android:padding="16dp"
                     android:textColorHint="#706C6C"
                     android:textSize="16sp" />
@@ -73,188 +344,373 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Ընտանիքի անդամներից քանի՞սն են տեղափոխվել ՀՀ" />
+                    android:text="Ստորև բերվածներից որո՞նք էին Ձեր տնային տնտեսության եկամտի աղբյուրները:" />
 
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Մշտական հաստիքով աշխատելու դիմաց ստացվող աշխատավարձը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Միանգամյա կամ կարճաժամկետ աշխատանքների դիմաց ստացվող գումարները"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Սեփական ձեռնարկությունից ստացված շահույթը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Սեփականությունը վարձով տրամադրելուց ստացված վարձավճարը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Տոկոսադրույքներից/ավանդներից ստացված եկամուտները"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Ինքնազբաղվածությունից ստացված եկամուտը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Գյուղատնտեսությունից ստացված եկամուտը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Արտասահմանում գտնվող ընտանիքի անդամներից/բարեկամներից ստացվող դրամական  օգնությունը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Հայաստանում գտնվող ընտանիքի անդամներից/բարեկամներից ստացվող դրամական օգնությունը"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Նպաստներ, կենսաթոշակներ և այլ տեսակի թոշակներ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Անձնական իրերի վաճառքից ստացված գումարներ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Անձնական իրերի վաճառքից ստացված գումարներ"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Օգնություն ապրանքի կամ մթերքի տեսքով"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Այո" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ոչ" />
+                </RadioGroup>
+
+
+                <TextView
+                    style="@style/InputHeaderStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Այլ՝"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:layout_height="wrap_content" />
 
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ընտանիքի անդամներից քանի՞սն են մնացել Արցախում" />
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ընտանիքի անդամներից քանի՞սն են զոհվել" />
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ո՞րն էր Ձեր բնակավայրը լքելու հիմնական պատճառը /նշել բոլոր վերաբերելի տարբերակները" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ինչպե՞ս կազմակերպվեց Ձեր/Ձեր ընտանիքի տեղափոխումը ՀՀ:" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ասացեք խնդրեմ, որտեղ եք հիմա բնակվում,  բնակավայրի անվանումը՝" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Պատերազմից հետո  Հայաստանում Դուք բնակվում եք:" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ինչ եք կարողացել բերել Ձեր հետ տեղափոխվելիս՝ " />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Անհրաժեշտ իրերից ի՞նչ ունեք այսօր ձեր բնակության վայրում`" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ստացել եք արդյոք որևէ նյութական աջակցություն՝ (Նշել բոլոր հնարավոր պատասխանները)" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Նոյեմբերի 9-10-ին ստորագրված փաստաղթի համաձայն Ձեր բնակավայրը" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ձեր ունեցած սեփականությունից ի՞նչ է պահպանվել կանգուն վիճակում, ինչն եք կորցրել" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Որտե՞ղ եք պլանավորում բնակվել մոտ ապագայում " />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ինչո՞վ եք պլանավորում զբաղվել մոտ ապագայում" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ձեր անձնագիրը" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ամուսնական կարգավիճակը՝" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Ձեր տարիքը" />
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Հարցվողի սեռը" />
-
-                <TextView
-                    style="@style/InputHeaderStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Լրացուցիչ նշումներ`" />
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/next"
@@ -262,7 +718,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_marginTop="30dp"
-                    android:text="@string/save"
+                    android:text="@string/next"
                     app:layout_constraintBottom_toBottomOf="parent" />
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
