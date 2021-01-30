@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="vModel"
+            type="com.example.questionaryartsakh.viewmodels.PartOneViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

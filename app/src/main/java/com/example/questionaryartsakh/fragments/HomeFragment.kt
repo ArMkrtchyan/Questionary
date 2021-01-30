@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import com.example.questionaryartsakh.AdapterBlanks
 import com.example.questionaryartsakh.Blank
+import com.example.questionaryartsakh.BlankApp
 import com.example.questionaryartsakh.database.BlankRepository
 import com.example.questionaryartsakh.databinding.FragmentHomeBinding
 import com.example.questionaryartsakh.utils.DialogUtil
@@ -20,24 +21,14 @@ import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
+    private lateinit var mBinding: FragmentHomeBinding
+
     @ExperimentalCoroutinesApi
     private val repository by lazy { BlankRepository() }
     private val blanks = ArrayList<Blank>().apply {
         add(Blank(0, 1))
         add(Blank(1, 2))
         add(Blank(2, 3))
-        add(Blank(3, 1))
-        add(Blank(4, 2))
-        add(Blank(5, 3))
-        add(Blank(6, 1))
-        add(Blank(7, 2))
-        add(Blank(8, 3))
-        add(Blank(9, 1))
-        add(Blank(10, 2))
-        add(Blank(11, 3))
-        add(Blank(12, 1))
-        add(Blank(13, 2))
-        add(Blank(14, 3))
     }
     private val adapter by lazy {
         AdapterBlanks(this::edit, this::send, this::delete, this::show).apply {
@@ -50,7 +41,7 @@ class HomeFragment : Fragment() {
     @ExperimentalCoroutinesApi
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return FragmentHomeBinding.inflate(inflater, container, false).apply {
+        if (!::mBinding.isInitialized) mBinding = FragmentHomeBinding.inflate(inflater, container, false).apply {
             lifecycleScope.launch {
                 repository.findAllBlanks {
                     it.collect { list ->
@@ -62,7 +53,13 @@ class HomeFragment : Fragment() {
                 view?.findNavController()?.navigate(HomeFragmentDirections.actionHomeFragmentToPartOneFragment())
             }
             blanks.adapter = adapter
-        }.root
+        }
+        return mBinding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        BlankApp.getInstance().releaseBlank()
     }
 
     private fun edit(blank: Blank) {

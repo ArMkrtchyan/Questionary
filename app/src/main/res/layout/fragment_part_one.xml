@@ -6,9 +6,8 @@
     <data>
 
         <variable
-            name="blank"
-            type="com.example.questionaryartsakh.Blank" />
-
+            name="vModel"
+            type="com.example.questionaryartsakh.viewmodels.PartOneViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,13 +46,13 @@
                     android:layout_height="wrap_content"
                     android:text="Հեռախոս" />
 
-                <EditText
-                    android:id="@+id/telephone"
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Օր-կ +37455555555"
-                    android:text="@{blank.telephone}" />
+                    android:inputType="numberDecimal"
+                    android:text="@={vModel.telLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -62,12 +61,13 @@
                     android:layout_marginTop="20dp"
                     android:text="Ամսաթիվ" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
                     android:hint="Օր-կ՝ 21.07.1992"
-                    android:text="@={blank.date}" />
+                    android:text="@={vModel.dateLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -76,12 +76,12 @@
                     android:layout_marginTop="20dp"
                     android:text="ԱԱՀ " />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան"
-                    android:text="@={blank.fullName}" />
+                    android:text="@={vModel.fullNameLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -90,14 +90,13 @@
                     android:layout_marginTop="20dp"
                     android:text="Ծննդյան ամսաթիվ" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
+                    android:inputType="numberDecimal"
                     android:hint="Օր-կ՝ 21.07.1992"
-                    android:text="@={blank.dateOfBirthDay}" />
+                    android:text="@={vModel.dateOfBirthDayLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -106,14 +105,12 @@
                     android:layout_marginTop="20dp"
                     android:text="Որտեղ եք ծնվել" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
-                    android:text="@={blank.birthPlace}" />
+                    android:text="@={vModel.birthPlaceLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -122,14 +119,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Ասացեք խնդրեմ, ո՞ր բնակավայրում էիք բնակվում մինչ պատերազմը" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
-                    android:text="@={blank.livingPlaceBeforeWar}" />
+                    android:text="@={vModel.livingPlaceBeforeWarLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -138,14 +135,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Նշեք Ձեր հասցեն Արցախում" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ ԱՀ, ք․ Ստեփանակարտ"
-                    android:text="@={blank.addressInArcakh}" />
+                    android:text="@={vModel.addressInArcakhLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -154,14 +151,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Որքա՞ն ժամանակ եք բնակվել այդ բնակավայրում" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ 3 տարի 4 ամիս"
-                    android:text="@={blank.livingTime}" />
+                    android:text="@={vModel.livingTimeLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -170,14 +167,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Քանի՞ հոգուց է բաղկացած Ձեր ընտանիքը:" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ 5 հոգուց"
-                    android:text="@={blank.familyCount}" />
+                    android:text="@={vModel.familyCountLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -186,14 +183,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Նշվածներից քանի՞սն են արական սեռի ներկայացուցիչ:" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ 3 հոգի"
-                    android:text="@={blank.familyMaleCount}" />
+                    android:text="@={vModel.familyMaleCountLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -202,14 +199,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Նշվածներից քանի՞սն են անչափահաս (18 տարեկանը չլրացած):" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ 1 հոգի"
-                    android:text="@={blank.familyUnder18Count}" />
+                    android:text="@={vModel.familyUnder18CountLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -218,14 +215,14 @@
                     android:layout_marginTop="20dp"
                     android:text="Ձեր ընտանիքում քանի՞ սերունդ է ապրում:" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/input_background"
                     android:hint="Օր-կ՝ 3 սերունդ"
-                    android:text="@={blank.familyGenCount}" />
+                    android:text="@={vModel.familyGenCountLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -262,14 +259,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
-                            android:checked="@={blank.familyMembers.invalid}"
+                            android:checked="@={vModel.invalidLiveData}"
                             android:text="Այո" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
                             android:id="@+id/invalid_no"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:checked="@={!blank.familyMembers.invalid}"
+                            android:checked="@={!vModel.invalidLiveData}"
                             android:text="Ոչ" />
                     </RadioGroup>
 
@@ -298,14 +295,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="16dp"
-                            android:checked="@={blank.familyMembers.toshakaru}"
+                            android:checked="@={vModel.toshakaruLiveData}"
                             android:text="Այո" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
                             android:id="@+id/toshak_no"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:checked="@={!blank.familyMembers.toshakaru}"
+                            android:checked="@={!vModel.toshakaruLiveData}"
                             android:text="Ոչ" />
                     </RadioGroup>
 

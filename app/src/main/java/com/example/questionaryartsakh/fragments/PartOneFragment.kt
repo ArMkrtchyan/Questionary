@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import com.example.questionaryartsakh.BlankApp
 import com.example.questionaryartsakh.MainActivity
 import com.example.questionaryartsakh.databinding.FragmentPartOneBinding
+import com.example.questionaryartsakh.viewmodels.PartOneViewModel
 
 class PartOneFragment : Fragment() {
 
@@ -16,12 +17,9 @@ class PartOneFragment : Fragment() {
         // Inflate the layout for this fragment
         return FragmentPartOneBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
-            blank = BlankApp.getInstance().getBlank()
+            vModel = ViewModelProvider(this@PartOneFragment)[PartOneViewModel::class.java]
             (activity as MainActivity).setSupportActionBar(toolbar)
             next.setOnClickListener {
-                BlankApp.getInstance().getBlank().also {
-                    it.telephone = telephone.text.toString()
-                }
                 view?.findNavController()?.navigate(PartOneFragmentDirections.actionPartOneFragmentToPartTwoFragment())
             }
         }.root
