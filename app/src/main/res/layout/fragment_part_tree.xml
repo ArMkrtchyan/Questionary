@@ -333,14 +333,10 @@
 
 
                 <EditText
+                    style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/input_background"
-                    android:hint="Օր-կ՝ 80000dram"
-                    android:padding="16dp"
-                    android:textColorHint="#706C6C"
-                    android:textSize="16sp" />
+                    android:hint="Օր-կ՝ 80000dram" />
 
                 <TextView
                     style="@style/InputHeaderStyle"

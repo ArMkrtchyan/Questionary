@@ -19,7 +19,7 @@ class PartTwoViewModel : ViewModel() {
     var familyMaleCountLiveData = blank.familyMaleCountLiveData
     var familyUnder18CountLiveData = blank.familyUnder18CountLiveData
     var familyGenCountLiveData = blank.familyGenCountLiveData
-    var toshakaruLiveData = blank.toshakaruLiveData
+    var toshakaruLiveData = blank.exhibitionerLiveData
     var invalidLiveData = blank.invalidLiveData
 
 }
