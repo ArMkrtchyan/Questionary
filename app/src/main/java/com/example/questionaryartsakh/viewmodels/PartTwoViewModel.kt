@@ -7,19 +7,14 @@ class PartTwoViewModel : ViewModel() {
 
     private val blank = BlankApp.getInstance().getBlank()
 
-    var telLiveData = blank.telephoneLiveData
-    var dateOfBirthDayLiveData = blank.dateOfBirthDayLiveData
-    var fullNameLiveData = blank.fullNameLiveData
-    var dateLiveData = blank.dateLiveData
-    var birthPlaceLiveData = blank.birthPlaceLiveData
-    var livingPlaceBeforeWarLiveData = blank.livingPlaceBeforeWarLiveData
-    var addressInArcakhLiveData = blank.addressInArcakhLiveData
-    var livingTimeLiveData = blank.livingTimeLiveData
-    var familyCountLiveData = blank.familyCountLiveData
-    var familyMaleCountLiveData = blank.familyMaleCountLiveData
-    var familyUnder18CountLiveData = blank.familyUnder18CountLiveData
-    var familyGenCountLiveData = blank.familyGenCountLiveData
-    var toshakaruLiveData = blank.exhibitionerLiveData
-    var invalidLiveData = blank.invalidLiveData
+    var educationField1LiveData = blank.educationField1LiveData
+    var educationField2LiveData = blank.educationField2LiveData
+    var educationField3LiveData = blank.educationField3LiveData
+    var educationField4LiveData = blank.educationField4LiveData
+    var educationField5LiveData = blank.educationField5LiveData
+    var educationField6LiveData = blank.educationField6LiveData
+    var spacializationLiveData = blank.spacializationLiveData
+    var computerSkillLiveData = blank.computerSkillLiveData
+    var driveCarLiveData = blank.driveCarLiveData
 
 }

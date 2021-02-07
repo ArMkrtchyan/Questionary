@@ -7,7 +7,7 @@
 
         <variable
             name="vModel"
-            type="com.example.questionaryartsakh.viewmodels.PartOneViewModel" />
+            type="com.example.questionaryartsakh.viewmodels.PartTwoViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -55,32 +55,37 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
+                        android:checked="@={vModel.educationField1LiveData}"
                         android:text="Միջնակարգ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.educationField2LiveData}"
                         android:text="Միջնակարգ մասնագիտական" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.educationField3LiveData}"
                         android:text="Թերի բարձրագույն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
+                        android:checked="@={vModel.educationField4LiveData}"
                         android:layout_height="wrap_content"
                         android:text="Ուսանող" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.educationField5LiveData}"
                         android:text="Բարձրագույն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.educationField6LiveData}"
                         android:text="Գիտական աստիճան (գիտ.թեկնածու, դոկտոր և այլն)" />
                 </RadioGroup>
 
@@ -92,10 +97,11 @@
                     android:text="Ձեր մասնագիտությունը`" />
 
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="@={vModel.spacializationLiveData}"
                     android:hint="Օր-կ՝ Պողոս Պողոսի Պողոսյան" />
 
                 <TextView
@@ -274,7 +280,7 @@
                         android:textSize="14sp"
                         android:textStyle="normal" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/other_1"
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
@@ -317,7 +323,7 @@
                     </RadioGroup>
 
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         android:id="@+id/other_2"
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
@@ -380,13 +386,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
+                        android:checked="@={vModel.computerSkillLiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/computer_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:checked="@={!vModel.computerSkillLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -407,6 +414,7 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/driver_yes"
                         android:layout_width="wrap_content"
+                        android:checked="@={vModel.driveCarLiveData}"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:text="Այո" />
@@ -414,6 +422,7 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/driver_no"
                         android:layout_width="wrap_content"
+                        android:checked="@={vModel.driveCarLiveData}"
                         android:layout_height="wrap_content"
 
                         android:text="Ոչ" />
@@ -497,7 +506,7 @@
                         android:layout_height="wrap_content"
                         android:text="Ինքնազբաղվածություն" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -509,13 +518,14 @@
                         android:layout_height="wrap_content"
                         android:text="Այլ պատասխան" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
                         android:hint="" />
                 </RadioGroup>
+
                 <Button
                     android:id="@+id/next"
                     style="@style/MyBtnStyle"
