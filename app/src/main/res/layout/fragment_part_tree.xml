@@ -7,7 +7,7 @@
 
         <variable
             name="vModel"
-            type="com.example.questionaryartsakh.viewmodels.PartOneViewModel" />
+            type="com.example.questionaryartsakh.viewmodels.PartTreeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -55,101 +55,119 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
+                        android:checked="@={vModel.workSpecialization1LiveData}"
                         android:text="Բանկեր/ ֆինանսներ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization2LiveData}"
                         android:text="Հաղորդակցություն, կապ/ ինֆորմացիոն տեխնոլոգիաներ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization3LiveData}"
                         android:text="Շինարարություն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization4LiveData}"
                         android:text="Մշակույթ/ արվեստ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization5LiveData}"
                         android:text="Սպորտ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization6LiveData}"
                         android:text="Կրթություն/ գիտություն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization7LiveData}"
                         android:text="Կառավարություն/ քաղ. ծառայություն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization8LiveData}"
                         android:text="Ուժային կառույցներ (ՊՆ, Ոստիկանություն)" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization9LiveData}"
                         android:text="Առողջապահություն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization10LiveData}"
                         android:text="Արդյունաբերություն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization11LiveData}"
                         android:text="ԶԼՄ և գովազդ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization12LiveData}"
                         android:text="Առևտուր/ սպասարկում" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization13LiveData}"
                         android:text="Տրանսպորտ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization14LiveData}"
                         android:text="Կոմունալ ծառայություններ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization15LiveData}"
                         android:text="Կենցաղային սպասարկում" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization16LiveData}"
                         android:text="Ծառայություններ (ռեստորաններ, սրճարաններ)" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecialization17LiveData}"
                         android:text="Գյուղատնտեսություն" />
 
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workSpecializationOtherFieldLiveData}"
                         android:text="Այլ պատասխան" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
-                        android:hint="" />
+                        android:hint=""
+                        android:text="@={vModel.workSpecializationOtherLiveData}" />
                 </RadioGroup>
 
                 <TextView
@@ -168,6 +186,7 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusField1LiveData}"
 
                         android:text="Բարձր կարգի ղեկավար/ տնօրեն, փոխտնօրեն" />
 
@@ -175,43 +194,50 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusField2LiveData}"
                         android:text="Միջին կարգի ղեկավար/ մենեջեր, բաժնի վարիչ" />
 
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusField3LiveData}"
                         android:text="Որակավորված մասնագետ" />
 
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusField4LiveData}"
                         android:text="Գրասենյակային աշխատող" />
 
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusField5LiveData}"
                         android:text="Ծառայություններ մատուցող (վաճառող, մատուցող, վարսավիր եւ այլն)" />
 
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusField6LiveData}"
                         android:text="Չորակավորված աշխատող/ բանվոր" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workStatusOtherFieldLiveData}"
                         android:text="Այլ պատասխան" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
-                        android:hint="" />
+                        android:hint=""
+                        android:text="@={vModel.workStatusOtherLiveData}" />
                 </RadioGroup>
 
                 <TextView
@@ -230,11 +256,12 @@
                     android:textAllCaps="false"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/volort"
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.workDurationInFieldLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -245,11 +272,12 @@
                     android:textAllCaps="false"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/company"
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.workDurationInOrganizationLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -260,13 +288,12 @@
                     android:textAllCaps="false"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/pashton"
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.workDurationInPositionLiveData}" />
 
 
                 <TextView
@@ -285,27 +312,32 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workProgressField1LiveData}"
 
                         android:text="կտրուկ աշխատանքային առաջընթաց եմ ունեցել" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workProgressField2LiveData}"
                         android:text="աստիճանաբար աշխատանքային առաջընթաց եմ ունեցել" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workProgressField3LiveData}"
                         android:text="աշխատանքային առաջընթաց չեմ ունեցել" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workProgressField4LiveData}"
                         android:text="աստիճանաբար աշխատանքային կարիերայի անկում եմ ապրել" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workProgressField5LiveData}"
                         android:text="կտրուկ աշխատանքային կարիերայի անկում եմ ապրել" />
 
                 </RadioGroup>
@@ -318,11 +350,12 @@
                     android:text="Իսկ որքա՞ն էր կազմում Ձեր ընտանիքի ամսական միջին եկամուտը՝" />
 
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Օր-կ՝ 150000 dram" />
+                    android:hint="Օր-կ՝ 150000 dram"
+                    android:text="@={vModel.familyMonthlyIncomeLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -332,11 +365,12 @@
                     android:text="Իսկ որքա՞ն էր կազմում անձամբ Ձեր եկամուտը:" />
 
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Օր-կ՝ 80000dram" />
+                    android:hint="Օր-կ՝ 80000dram"
+                    android:text="@={vModel.monthlyIncomeLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -363,11 +397,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource1LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource1LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -390,11 +426,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource2LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource2LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -417,11 +455,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource3LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource3LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -444,11 +484,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource4LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource4LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -471,11 +513,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource5LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource5LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -498,11 +542,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource6LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource6LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -525,11 +571,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource7LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource7LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -552,11 +600,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource8LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource8LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -578,11 +628,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource9LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource9LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -605,11 +657,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource10LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource10LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -632,11 +686,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource11LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource11LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -659,11 +715,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource12LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource12LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -686,11 +744,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyIncomeSource13LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={!vModel.familyIncomeSource13LiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -705,10 +765,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.familyIncomeOtherLiveData}" />
 
 
                 <Button

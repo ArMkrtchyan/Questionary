@@ -31,8 +31,6 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
     var alreadyWork: String = "", var futurePlansOther: String = "", var passport: SubFields = SubFields(), var passportOther: String = "", var maried: SubFields = SubFields(),
     var mariedOther: String = "", var years: String = "", var gender: SubFields = SubFields(), var other: String = "") {
 
-    //Page 5
-
     data class Languages(var armenian: Int = LevelEnum.GOOD.type, var russian: Int = LevelEnum.MIDDLE.type, var english: Int = LevelEnum.BAD.type,
         var other1: Int = LevelEnum.BAD.type, var other2: Int = LevelEnum.BAD.type) {
 
@@ -914,4 +912,658 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
             hasBeforeWar.other = it
         }
     }
+
+    //Page 5
+
+    var livingPlaceLeaveTimeLiveData = MutableLiveData(livingPlaceLeaveTime).apply {
+        observeForever {
+            livingPlaceLeaveTime = it
+        }
+    }
+    var countOfFamilyMembersInArmeniaLiveData = MutableLiveData(countOfFamilyMembersInArmenia).apply {
+        observeForever {
+            countOfFamilyMembersInArmenia = it
+        }
+    }
+    var countOfFamilyMembersInArcakhLiveData = MutableLiveData(countOfFamilyMembersInArcakh).apply {
+        observeForever {
+            countOfFamilyMembersInArcakh = it
+        }
+    }
+    var countOfDeathFamilyMembersLiveData = MutableLiveData(countOfDeathFamilyMembers).apply {
+        observeForever {
+            countOfDeathFamilyMembers = it
+        }
+    }
+    var leaveReason1LiveData = MutableLiveData(leaveReason.field1).apply {
+        observeForever {
+            leaveReason.field1 = it
+        }
+    }
+
+    var leaveReason2LiveData = MutableLiveData(leaveReason.field2).apply {
+        observeForever {
+            leaveReason.field2 = it
+        }
+    }
+
+    var leaveReason3LiveData = MutableLiveData(leaveReason.field3).apply {
+        observeForever {
+            leaveReason.field3 = it
+        }
+    }
+
+    var leaveReason4LiveData = MutableLiveData(leaveReason.field4).apply {
+        observeForever {
+            leaveReason.field4 = it
+        }
+    }
+
+    var leaveReason5LiveData = MutableLiveData(leaveReason.field5).apply {
+        observeForever {
+            leaveReason.field5 = it
+        }
+    }
+
+    var leaveReasonOtherFieldLiveData = MutableLiveData(leaveReason.other).apply {
+        observeForever {
+            leaveReason.other = it
+        }
+    }
+
+    var leaveReasonOtherLiveData = MutableLiveData(leaveReasonOther).apply {
+        observeForever {
+            leaveReasonOther = it
+        }
+    }
+
+    var leavePath1LiveData = MutableLiveData(leavePath.field1).apply {
+        observeForever {
+            leavePath.field1 = it
+        }
+    }
+
+    var leavePath2LiveData = MutableLiveData(leavePath.field2).apply {
+        observeForever {
+            leavePath.field2 = it
+        }
+    }
+
+    var leavePath3LiveData = MutableLiveData(leavePath.field3).apply {
+        observeForever {
+            leavePath.field3 = it
+        }
+    }
+
+    var leavePath4LiveData = MutableLiveData(leavePath.field4).apply {
+        observeForever {
+            leavePath.field4 = it
+        }
+    }
+
+    var leavePath5LiveData = MutableLiveData(leavePath.field5).apply {
+        observeForever {
+            leavePath.field5 = it
+        }
+    }
+
+    var leavePathOtherFieldLiveData = MutableLiveData(leavePath.other).apply {
+        observeForever {
+            leavePath.other = it
+        }
+    }
+
+    var leavePathOtherLiveData = MutableLiveData(leavePathOther).apply {
+        observeForever {
+            leavePathOther = it
+        }
+    }
+    var currentLivingPlaceLiveData = MutableLiveData(currentLivingPlace).apply {
+        observeForever {
+            currentLivingPlace = it
+        }
+    }
+
+    //////
+    var livingPlaceAfterWar1LiveData = MutableLiveData(livingPlaceAfterWar.field1).apply {
+        observeForever {
+            livingPlaceAfterWar.field1 = it
+        }
+    }
+
+    var livingPlaceAfterWar2LiveData = MutableLiveData(livingPlaceAfterWar.field2).apply {
+        observeForever {
+            livingPlaceAfterWar.field2 = it
+        }
+    }
+
+    var livingPlaceAfterWar3LiveData = MutableLiveData(livingPlaceAfterWar.field3).apply {
+        observeForever {
+            livingPlaceAfterWar.field3 = it
+        }
+    }
+
+    var livingPlaceAfterWar4LiveData = MutableLiveData(livingPlaceAfterWar.field4).apply {
+        observeForever {
+            livingPlaceAfterWar.field4 = it
+        }
+    }
+
+    var livingPlaceAfterWar5LiveData = MutableLiveData(livingPlaceAfterWar.field5).apply {
+        observeForever {
+            livingPlaceAfterWar.field5 = it
+        }
+    }
+    var livingPlaceAfterWar6LiveData = MutableLiveData(livingPlaceAfterWar.field6).apply {
+        observeForever {
+            livingPlaceAfterWar.field6 = it
+        }
+    }
+    var temporaryLivingPlaceAfterWarLiveData = MutableLiveData(temporaryLivingPlaceAfterWar).apply {
+        observeForever {
+            temporaryLivingPlaceAfterWar = it
+        }
+    }
+    var livingPlaceAfterWarOtherFieldLiveData = MutableLiveData(livingPlaceAfterWar.other).apply {
+        observeForever {
+            livingPlaceAfterWar.other = it
+        }
+    }
+
+    var livingPlaceAfterWarOtherLiveData = MutableLiveData(livingPlaceAfterWarOther).apply {
+        observeForever {
+            livingPlaceAfterWarOther = it
+        }
+    }
+
+    ///
+
+    var currentThings1LiveData = MutableLiveData(currentThings.field1).apply {
+        observeForever {
+            currentThings.field1 = it
+        }
+    }
+
+    var currentThings2LiveData = MutableLiveData(currentThings.field2).apply {
+        observeForever {
+            currentThings.field2 = it
+        }
+    }
+
+    var currentThings3LiveData = MutableLiveData(currentThings.field3).apply {
+        observeForever {
+            currentThings.field3 = it
+        }
+    }
+
+    var currentThings4LiveData = MutableLiveData(currentThings.field4).apply {
+        observeForever {
+            currentThings.field4 = it
+        }
+    }
+
+    var currentThings5LiveData = MutableLiveData(currentThings.field5).apply {
+        observeForever {
+            currentThings.field5 = it
+        }
+    }
+    var currentThings6LiveData = MutableLiveData(currentThings.field6).apply {
+        observeForever {
+            currentThings.field6 = it
+        }
+    }
+    var currentThings7LiveData = MutableLiveData(currentThings.field7).apply {
+        observeForever {
+            currentThings.field7 = it
+        }
+    }
+    var currentThings8LiveData = MutableLiveData(currentThings.field8).apply {
+        observeForever {
+            currentThings.field8 = it
+        }
+    }
+    var currentThings9LiveData = MutableLiveData(currentThings.field9).apply {
+        observeForever {
+            currentThings.field9 = it
+        }
+    }
+    var currentThings10LiveData = MutableLiveData(currentThings.field10).apply {
+        observeForever {
+            currentThings.field6 = it
+        }
+    }
+    var currentThings11LiveData = MutableLiveData(currentThings.field11).apply {
+        observeForever {
+            currentThings.field11 = it
+        }
+    }
+    var currentThings12LiveData = MutableLiveData(currentThings.field12).apply {
+        observeForever {
+            currentThings.field12 = it
+        }
+    }
+    var currentThings13LiveData = MutableLiveData(currentThings.field13).apply {
+        observeForever {
+            currentThings.field13 = it
+        }
+    }
+
+    var currentThingsOtherLiveData = MutableLiveData(currentThingsOther).apply {
+        observeForever {
+            livingPlaceAfterWarOther = it
+        }
+    }
+
+    var currentThingsInNow1LiveData = MutableLiveData(currentThingsInNow.field1).apply {
+        observeForever {
+            currentThingsInNow.field1 = it
+        }
+    }
+    var currentThingsInNow2LiveData = MutableLiveData(currentThingsInNow.field2).apply {
+        observeForever {
+            currentThingsInNow.field2 = it
+        }
+    }
+    var currentThingsInNow3LiveData = MutableLiveData(currentThingsInNow.field3).apply {
+        observeForever {
+            currentThingsInNow.field3 = it
+        }
+    }
+    var currentThingsInNow4LiveData = MutableLiveData(currentThingsInNow.field4).apply {
+        observeForever {
+            currentThingsInNow.field4 = it
+        }
+    }
+    var currentThingsInNow5LiveData = MutableLiveData(currentThingsInNow.field5).apply {
+        observeForever {
+            currentThingsInNow.field5 = it
+        }
+    }
+    var currentThingsInNow6LiveData = MutableLiveData(currentThingsInNow.field6).apply {
+        observeForever {
+            currentThingsInNow.field6 = it
+        }
+    }
+    var currentThingsInNow7LiveData = MutableLiveData(currentThingsInNow.field7).apply {
+        observeForever {
+            currentThingsInNow.field7 = it
+        }
+    }
+    var currentThingsInNow8LiveData = MutableLiveData(currentThingsInNow.field8).apply {
+        observeForever {
+            currentThingsInNow.field8 = it
+        }
+    }
+    var currentThingsInNow9LiveData = MutableLiveData(currentThingsInNow.field9).apply {
+        observeForever {
+            currentThingsInNow.field9 = it
+        }
+    }
+    var currentThingsInNow10LiveData = MutableLiveData(currentThingsInNow.field10).apply {
+        observeForever {
+            currentThingsInNow.field10 = it
+        }
+    }
+    var currentThingsInNow11LiveData = MutableLiveData(currentThingsInNow.field11).apply {
+        observeForever {
+            currentThingsInNow.field11 = it
+        }
+    }
+    var currentThingsInNow12LiveData = MutableLiveData(currentThingsInNow.field12).apply {
+        observeForever {
+            currentThingsInNow.field12 = it
+        }
+    }
+    var currentThingsInNow13LiveData = MutableLiveData(currentThingsInNow.field13).apply {
+        observeForever {
+            currentThingsInNow.field13 = it
+        }
+    }
+    var currentThingsInNow14LiveData = MutableLiveData(currentThingsInNow.field14).apply {
+        observeForever {
+            currentThingsInNow.field14 = it
+        }
+    }
+    var currentThingsInNow15LiveData = MutableLiveData(currentThingsInNow.field15).apply {
+        observeForever {
+            currentThingsInNow.field15 = it
+        }
+    }
+    var currentThingsInNow16LiveData = MutableLiveData(currentThingsInNow.field16).apply {
+        observeForever {
+            currentThingsInNow.field16 = it
+        }
+    }
+
+    var materialHelp1LiveData = MutableLiveData(materialHelp.field1).apply {
+        observeForever {
+            materialHelp.field1 = it
+        }
+    }
+
+    var materialHelp2LiveData = MutableLiveData(materialHelp.field2).apply {
+        observeForever {
+            materialHelp.field2 = it
+        }
+    }
+
+    var materialHelp3LiveData = MutableLiveData(materialHelp.field3).apply {
+        observeForever {
+            materialHelp.field3 = it
+        }
+    }
+
+    var materialHelp4LiveData = MutableLiveData(materialHelp.field4).apply {
+        observeForever {
+            materialHelp.field4 = it
+        }
+    }
+
+    var materialHelp5LiveData = MutableLiveData(materialHelp.field5).apply {
+        observeForever {
+            materialHelp.field5 = it
+        }
+    }
+    var materialHelp6LiveData = MutableLiveData(materialHelp.field6).apply {
+        observeForever {
+            materialHelp.field6 = it
+        }
+    }
+    var materialHelp7LiveData = MutableLiveData(materialHelp.field7).apply {
+        observeForever {
+            materialHelp.field7 = it
+        }
+    }
+
+    var materialHelpOtherFieldLiveData = MutableLiveData(materialHelp.other).apply {
+        observeForever {
+            materialHelp.other = it
+        }
+    }
+
+    var materialHelpOtherLiveData = MutableLiveData(materialHelpOther).apply {
+        observeForever {
+            materialHelpOther = it
+        }
+    }
+
+    //Page 6
+
+    var home1LiveData = MutableLiveData(home.field1).apply {
+        observeForever {
+            home.field1 = it
+        }
+    }
+    var home2LiveData = MutableLiveData(home.field2).apply {
+        observeForever {
+            home.field2 = it
+        }
+    }
+    var home3LiveData = MutableLiveData(home.field3).apply {
+        observeForever {
+            home.field3 = it
+        }
+    }
+
+    var homeOtherFieldLiveData = MutableLiveData(home.other).apply {
+        observeForever {
+            home.other = it
+        }
+    }
+
+    var homeOtherLiveData = MutableLiveData(homeOther).apply {
+        observeForever {
+            homeOther = it
+        }
+    }
+
+    var owning1LiveData = MutableLiveData(owning.field1).apply {
+        observeForever {
+            owning.field1 = it
+        }
+    }
+    var owning2LiveData = MutableLiveData(owning.field2).apply {
+        observeForever {
+            owning.field2 = it
+        }
+    }
+    var owning3LiveData = MutableLiveData(owning.field3).apply {
+        observeForever {
+            owning.field3 = it
+        }
+    }
+    var owning4LiveData = MutableLiveData(owning.field4).apply {
+        observeForever {
+            owning.field4 = it
+        }
+    }
+    var owning5LiveData = MutableLiveData(owning.field5).apply {
+        observeForever {
+            owning.field5 = it
+        }
+    }
+    var owning6LiveData = MutableLiveData(owning.field6).apply {
+        observeForever {
+            owning.field6 = it
+        }
+    }
+
+    var owningOtherFieldLiveData = MutableLiveData(owning.other).apply {
+        observeForever {
+            owning.other = it
+        }
+    }
+
+    var owningOtherLiveData = MutableLiveData(owningNowOther).apply {
+        observeForever {
+            owningNowOther = it
+        }
+    }
+
+    var willLivePlace1LiveData = MutableLiveData(willLivePlace.field1).apply {
+        observeForever {
+            willLivePlace.field1 = it
+        }
+    }
+    var willLivePlace2LiveData = MutableLiveData(willLivePlace.field2).apply {
+        observeForever {
+            willLivePlace.field2 = it
+        }
+    }
+    var willLivePlaceArcakhOtherLiveData = MutableLiveData(willLivePlaceArcakhOther).apply {
+        observeForever {
+            willLivePlaceArcakhOther = it
+        }
+    }
+    var willLivePlace3LiveData = MutableLiveData(willLivePlace.field3).apply {
+        observeForever {
+            willLivePlace.field3 = it
+        }
+    }
+    var willLivePlaceTemporaryArmeniaLiveData = MutableLiveData(willLivePlaceTemporaryArmenia).apply {
+        observeForever {
+            willLivePlaceTemporaryArmenia = it
+        }
+    }
+    var willLivePlace4LiveData = MutableLiveData(willLivePlace.field4).apply {
+        observeForever {
+            willLivePlace.field4 = it
+        }
+    }
+    var willLivePlaceArmeniaLiveData = MutableLiveData(willLivePlaceArmenia).apply {
+        observeForever {
+            willLivePlaceArmenia = it
+        }
+    }
+    var willLivePlace5LiveData = MutableLiveData(willLivePlace.field5).apply {
+        observeForever {
+            willLivePlace.field5 = it
+        }
+    }
+    var willLivePlace6LiveData = MutableLiveData(willLivePlace.field6).apply {
+        observeForever {
+            willLivePlace.field6 = it
+        }
+    }
+    var willLivePlace7LiveData = MutableLiveData(willLivePlace.field7).apply {
+        observeForever {
+            willLivePlace.field7 = it
+        }
+    }
+    var willLivePlaceAPHLiveData = MutableLiveData(willLivePlaceAPH).apply {
+        observeForever {
+            willLivePlaceAPH = it
+        }
+    }
+    var willLivePlace8LiveData = MutableLiveData(willLivePlace.field8).apply {
+        observeForever {
+            willLivePlace.field8 = it
+        }
+    }
+    var willLivePlaceEuropeLiveData = MutableLiveData(willLivePlaceEurope).apply {
+        observeForever {
+            willLivePlaceEurope = it
+        }
+    }
+    var willLivePlace9LiveData = MutableLiveData(willLivePlace.field9).apply {
+        observeForever {
+            willLivePlace.field9 = it
+        }
+    }
+
+    var willLivePlaceOtherFieldLiveData = MutableLiveData(willLivePlace.other).apply {
+        observeForever {
+            willLivePlace.other = it
+        }
+    }
+    var willLivePlaceOtherLiveData = MutableLiveData(owning.field6).apply {
+        observeForever {
+            owning.field6 = it
+        }
+    }
+    var futurePlans1LiveData = MutableLiveData(futurePlans.field1).apply {
+        observeForever {
+            futurePlans.field1 = it
+        }
+    }
+    var futurePlans2LiveData = MutableLiveData(futurePlans.field2).apply {
+        observeForever {
+            futurePlans.field2 = it
+        }
+    }
+    var futurePlans3LiveData = MutableLiveData(futurePlans.field3).apply {
+        observeForever {
+            futurePlans.field3 = it
+        }
+    }
+    var alreadyWorkLiveData = MutableLiveData(alreadyWork).apply {
+        observeForever {
+            alreadyWork = it
+        }
+    }
+    var futurePlans4LiveData = MutableLiveData(futurePlans.field4).apply {
+        observeForever {
+            futurePlans.field4 = it
+        }
+    }
+    var futurePlans5LiveData = MutableLiveData(futurePlans.field5).apply {
+        observeForever {
+            futurePlans.field5 = it
+        }
+    }
+    var futurePlansOtherFieldLiveData = MutableLiveData(futurePlans.other).apply {
+        observeForever {
+            futurePlans.other = it
+        }
+    }
+    var futurePlansOtherLiveData = MutableLiveData(futurePlansOther).apply {
+        observeForever {
+            futurePlansOther = it
+        }
+    }
+
+    var passport1LiveData = MutableLiveData(passport.field1).apply {
+        observeForever {
+            passport.field1 = it
+        }
+    }
+    var passport2LiveData = MutableLiveData(passport.field2).apply {
+        observeForever {
+            passport.field2 = it
+        }
+    }
+    var passport3LiveData = MutableLiveData(passport.field3).apply {
+        observeForever {
+            passport.field3 = it
+        }
+    }
+    var passportOtherFieldLiveData = MutableLiveData(passport.other).apply {
+        observeForever {
+            passport.other = it
+        }
+    }
+    var passportOtherLiveData = MutableLiveData(passportOther).apply {
+        observeForever {
+            passportOther = it
+        }
+    }
+
+    var maried1LiveData = MutableLiveData(maried.field1).apply {
+        observeForever {
+            maried.field1 = it
+        }
+    }
+    var maried2LiveData = MutableLiveData(maried.field2).apply {
+        observeForever {
+            maried.field2 = it
+        }
+    }
+    var maried3LiveData = MutableLiveData(maried.field3).apply {
+        observeForever {
+            maried.field3 = it
+        }
+    }
+    var maried4LiveData = MutableLiveData(maried.field4).apply {
+        observeForever {
+            maried.field4 = it
+        }
+    }
+    var maried5LiveData = MutableLiveData(maried.field5).apply {
+        observeForever {
+            maried.field5 = it
+        }
+    }
+    var mariedOtherFieldLiveData = MutableLiveData(maried.other).apply {
+        observeForever {
+            maried.other = it
+        }
+    }
+    var mariedOtherLiveData = MutableLiveData(mariedOther).apply {
+        observeForever {
+            mariedOther = it
+        }
+    }
+    var yearsLiveData = MutableLiveData(years).apply {
+        observeForever {
+            years = it
+        }
+    }
+
+    var gender1LiveData = MutableLiveData(gender.field1).apply {
+        observeForever {
+            gender.field1 = it
+        }
+    }
+    var gender2LiveData = MutableLiveData(gender.field2).apply {
+        observeForever {
+            gender.field2 = it
+        }
+    }
+
+    var otherLiveData = MutableLiveData(other).apply {
+        observeForever {
+            other = it
+        }
+    }
+
 }

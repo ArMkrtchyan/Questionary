@@ -139,6 +139,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
+                            android:checked="@={vModel.languageArmenianGoodLiveData}"
                             android:text="Լավ" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
@@ -147,7 +148,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
-
+                            android:checked="@={vModel.languageArmenianMiddleLiveData}"
                             android:text="Միջին" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
@@ -155,6 +156,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageArmenianBadLiveData}"
                             android:layout_marginEnd="16dp"
                             android:text="Վատ" />
 
@@ -163,6 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageArmenianNonLiveData}"
                             android:text="Ընդհանրապես չգիտեմ" />
                     </RadioGroup>
 
@@ -188,6 +191,7 @@
                             android:id="@+id/language_good_rus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:checked="@={vModel.languageRussianLiveDataGoodLiveData}"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
                             android:text="Լավ" />
@@ -199,12 +203,14 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
 
+                            android:checked="@={vModel.languageRussianLiveDataMiddleLiveData}"
                             android:text="Միջին" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
                             android:id="@+id/language_bad_rus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:checked="@={vModel.languageRussianLiveDataBadLiveData}"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
                             android:text="Վատ" />
@@ -213,6 +219,7 @@
                             android:id="@+id/language_dont_rus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:checked="@={vModel.languageRussianLiveDataNonLiveData}"
                             android:layout_gravity="center_vertical"
                             android:text="Ընդհանրապես չգիտեմ" />
                     </RadioGroup>
@@ -239,6 +246,7 @@
                             android:id="@+id/language_good_eng"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:checked="@={vModel.languageEnglishGoodLiveData}"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
                             android:text="Լավ" />
@@ -248,6 +256,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageEnglishMiddleLiveData}"
                             android:layout_marginEnd="16dp"
 
                             android:text="Միջին" />
@@ -258,6 +267,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
+                            android:checked="@={vModel.languageEnglishBadLiveData}"
                             android:text="Վատ" />
 
                         <androidx.appcompat.widget.AppCompatRadioButton
@@ -265,6 +275,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageEnglishNonLiveData}"
                             android:text="Ընդհանրապես չգիտեմ" />
                     </RadioGroup>
 
@@ -286,6 +297,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/other"
+                        android:text="@={vModel.langOther1LiveData}"
                         android:hint="Օր-կ՝ Գերմաներեն" />
 
                     <RadioGroup
@@ -299,6 +311,7 @@
                             android:id="@+id/language_good_other_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:checked="@={vModel.languageOther1GoodLiveData}"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
                             android:text="Լավ" />
@@ -308,6 +321,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageOther1MiddleLiveData}"
                             android:layout_marginEnd="16dp"
 
                             android:text="Միջին" />
@@ -316,6 +330,7 @@
                             android:id="@+id/language_bad_other_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:checked="@={vModel.languageOther1BadLiveData}"
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="16dp"
                             android:text="Վատ" />
@@ -327,6 +342,7 @@
                         android:id="@+id/other_2"
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
+                        android:text="@={vModel.langOther2LiveData}"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
                         android:hint="Օր-կ՝ Իսպաներեն" />
@@ -343,6 +359,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageOther2GoodLiveData}"
                             android:layout_marginEnd="16dp"
                             android:text="Լավ" />
 
@@ -351,6 +368,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageOther2MiddleLiveData}"
                             android:layout_marginEnd="16dp"
 
                             android:text="Միջին" />
@@ -360,6 +378,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:checked="@={vModel.languageOther2BadLiveData}"
                             android:layout_marginEnd="16dp"
                             android:text="Վատ" />
                     </RadioGroup>
@@ -422,7 +441,7 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:id="@+id/driver_no"
                         android:layout_width="wrap_content"
-                        android:checked="@={vModel.driveCarLiveData}"
+                        android:checked="@={!vModel.driveCarLiveData}"
                         android:layout_height="wrap_content"
 
                         android:text="Ոչ" />
@@ -444,26 +463,31 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workField1LiveData}"
                         android:text="Այո" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workField2LiveData}"
                         android:text="Ոչ, գործազուրկ էի" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
+                        android:checked="@={vModel.workField3LiveData}"
                         android:layout_height="wrap_content"
                         android:text="Ոչ, ուսանող էի" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workField4LiveData}"
                         android:text="Ոչ, տնային տնտեսուհի եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workField5LiveData}"
                         android:text="Ոչ, թոշակառու եմ" />
 
                 </RadioGroup>
@@ -484,31 +508,37 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workPlaceField1LiveData}"
                         android:text="Պետական հիմնարկում" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workPlaceField2LiveData}"
                         android:text="Մասնավոր հիմնարկում" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workPlaceField3LiveData}"
                         android:text="Տեղական հասարակական կազմակերպությունում" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workPlaceField4LiveData}"
                         android:text="Գյուղատնտեսություն" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
+                        android:checked="@={vModel.workPlaceField5LiveData}"
                         android:layout_height="wrap_content"
                         android:text="Ինքնազբաղվածություն" />
 
                     <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
+                        android:text="@={vModel.selfEmploymentLiveData}"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
                         android:hint="" />
@@ -516,11 +546,13 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.workPlaceField6LiveData}"
                         android:text="Այլ պատասխան" />
 
                     <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
+                        android:text="@={vModel.otherWorkPlaceLiveData}"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
                         android:hint="" />
