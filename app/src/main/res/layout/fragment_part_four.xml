@@ -7,7 +7,7 @@
 
         <variable
             name="vModel"
-            type="com.example.questionaryartsakh.viewmodels.PartOneViewModel" />
+            type="com.example.questionaryartsakh.viewmodels.PartFourViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,32 +56,37 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
+                        android:checked="@={vModel.familyMaterialInsurance1LiveData}"
                         android:text="Եկամուտները չէին բավարարում անգամ սննդի ծախսերը հոգալու համար" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyMaterialInsurance2LiveData}"
                         android:text="Եկամուտները բավարար էին սնունդն ապահովելու համար, բայց հագուստ գնելը մեզ համար լուրջ խնդիր է" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyMaterialInsurance3LiveData}"
                         android:text="Եկամուտները բավարար էին սնունդ և հագուստ ձեռք բերելու համար, բայց սառնարան կամ լվացքի մեքենա գնելը լուրջ խնդիր է" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyMaterialInsurance4LiveData}"
                         android:text="Եկամուտները բավարար են կենցաղային տեխնիկա գնելու համար, բայց նոր ավտոմեքենա գնել չենք կարող " />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyMaterialInsurance5LiveData}"
                         android:text="Եկամուտները բավարար են ամեն ինչի համար, բացի բնակարանի, ամառանոցի գնումից" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.familyMaterialInsurance6LiveData}"
                         android:text="Կարող ենք ձեռք բերել գրեթե ամեն ինչ և անել խնայողություններ" />
 
                 </RadioGroup>
@@ -103,35 +108,41 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.liveBeforeWar1LiveData}"
 
                         android:text="Ձեր սեփական բնակարանում/տանը " />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.liveBeforeWar2LiveData}"
                         android:text="Ծնողներիս, ամուսնուս/կնոջս, բարեկամներիս  բնակարանում/տանը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.liveBeforeWar3LiveData}"
                         android:text="Վարձով բնակարանում/տանը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.liveBeforeWar4LiveData}"
                         android:text="Հանրակացարանում" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.liveBeforeWar5LiveData}"
                         android:text="Այլ պատասխան" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
-                        android:hint="" />
+                        android:hint=""
+                        android:text="@={vModel.liveBeforeWarOtherLiveData}" />
                 </RadioGroup>
 
                 <TextView
@@ -159,16 +170,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerCarMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerCarNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerCarNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -182,16 +196,18 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
-                    style="@style/InputStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Քանակ" />
+                    android:text="@={vModel.currentOwnerCarPriceLiveData}" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ"
+                    android:text="@={vModel.currentOwnerCarCountLiveData}" />
 
 
                 <TextView
@@ -212,16 +228,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerGarageMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerGarageNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerGarageNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -235,10 +254,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerGaragePriceLiveData}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -246,21 +266,23 @@
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:hint="Քմ" />
+                        android:hint="Քմ"
+                        android:text="@={vModel.currentOwnerGarageSquareLiveData}" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="Քանակ" />
+                        android:hint="Քանակ"
+                        android:text="@={vModel.currentOwnerGarageCountLiveData}" />
 
                 </LinearLayout>
 
@@ -282,16 +304,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerHomeMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerHomeNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerHomeNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -305,10 +330,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerHomePriceLiveData}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -316,21 +342,23 @@
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:hint="Քմ" />
+                        android:hint="Քմ"
+                        android:text="@={vModel.currentOwnerHomeSquareLiveData}" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="Քանակ" />
+                        android:hint="Քանակ"
+                        android:text="@={vModel.currentOwnerHomeCountLiveData}" />
 
                 </LinearLayout>
 
@@ -352,16 +380,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerDachaMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerDachaNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerDachaNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -375,10 +406,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerDachaPriceLiveData}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -386,21 +418,23 @@
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:hint="Քմ" />
+                        android:hint="Քմ"
+                        android:text="@={vModel.currentOwnerDachaSquareLiveData}" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="Քանակ" />
+                        android:hint="Քանակ"
+                        android:text="@={vModel.currentOwnerDachaCountLiveData}" />
 
                 </LinearLayout>
 
@@ -422,16 +456,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerOrganizationMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerOrganizationNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerOrganizationNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -445,10 +482,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerOrganizationPriceLiveData}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -456,21 +494,23 @@
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:hint="Քմ" />
+                        android:hint="Քմ"
+                        android:text="@={vModel.currentOwnerOrganizationSquareLiveData}" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="Քանակ" />
+                        android:hint="Քանակ"
+                        android:text="@={vModel.currentOwnerOrganizationCountLiveData}" />
 
                 </LinearLayout>
 
@@ -492,16 +532,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerPlaceMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerPlaceNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerPlaceNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -515,10 +558,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerPlacePriceLiveData}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -526,21 +570,23 @@
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:hint="Քմ" />
+                        android:hint="Քմ"
+                        android:text="@={vModel.currentOwnerPlaceSquareLiveData}" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="Քանակ" />
+                        android:hint="Քանակ"
+                        android:text="@={vModel.currentOwnerPlaceCountLiveData}" />
 
                 </LinearLayout>
 
@@ -562,16 +608,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerMoneyMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerMoneyNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerMoneyNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -585,17 +634,19 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
-                    style="@style/InputStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Քանակ" />
+                    android:text="@={vModel.currentOwnerMoneyPriceLiveData}" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ"
+                    android:text="@={vModel.currentOwnerMoneyCountLiveData}" />
 
 
                 <TextView
@@ -616,16 +667,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerAvandMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerAvandNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerAvandNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -639,17 +693,19 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
-                    style="@style/InputStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Քանակ" />
+                    android:text="@={vModel.currentOwnerAvandPriceLiveData}" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ"
+                    android:text="@={vModel.currentOwnerAvandCountLiveData}" />
 
                 <TextView
                     style="@style/InputHeaderStyle"
@@ -669,16 +725,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerHipotekMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerHipotekNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerHipotekNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -692,17 +751,19 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
-                    style="@style/InputStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Քանակ" />
+                    android:text="@={vModel.currentOwnerHipotekPriceLiveData}" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ"
+                    android:text="@={vModel.currentOwnerHipotekCountLiveData}" />
 
 
                 <TextView
@@ -723,16 +784,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerGoldsMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerGoldsNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerGoldsNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -746,17 +810,19 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
-                    style="@style/InputStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Քանակ" />
+                    android:text="@={vModel.currentOwnerGoldsPriceLiveData}" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ"
+                    android:text="@={vModel.currentOwnerGoldsCountLiveData}" />
 
 
                 <TextView
@@ -777,16 +843,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerArjetuxtMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerArjetuxtNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerArjetuxtNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -800,17 +869,19 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
-                    style="@style/InputStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Քանակ" />
+                    android:text="@={vModel.currentOwnerArjetuxtPriceLiveData}" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/InputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Քանակ"
+                    android:text="@={vModel.currentOwnerArjetuxtCountLiveData}" />
 
 
                 <TextView
@@ -823,10 +894,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerOtherNameLiveData}" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
@@ -836,16 +908,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerOtherMineLiveData}"
                         android:text="Սեփ-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerOtherNotOnlyMineLiveData}"
                         android:text="Համա-տեր եմ" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.currentOwnerOtherNonLiveData}"
                         android:text="Չունեմ " />
                 </RadioGroup>
 
@@ -859,10 +934,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.currentOwnerOtherPriceLiveData}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -870,21 +946,23 @@
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:hint="Քմ" />
+                        android:hint="Քմ"
+                        android:text="@={vModel.currentOwnerOtherSquareLiveData}" />
 
-                    <EditText
+                    <androidx.appcompat.widget.AppCompatEditText
                         style="@style/InputStyle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="Քանակ" />
+                        android:hint="Քանակ"
+                        android:text="@={vModel.currentOwnerOtherCountLiveData}" />
 
                 </LinearLayout>
 
@@ -914,16 +992,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar1YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar1YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar1NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -946,16 +1027,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar2YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar2YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar2NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -979,16 +1063,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar3YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar3YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar3NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1011,16 +1098,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar4YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar4YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar4NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1042,16 +1132,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar5YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar5YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar5NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1074,16 +1167,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar6YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar6YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar6NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1106,16 +1202,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar7YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar7YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar7NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1139,16 +1238,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar8YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar8YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar8NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1171,16 +1273,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar9YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar9YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar9NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1202,16 +1307,19 @@
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar10YesNewLiveData}"
                         android:text="Այո, նորը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar10YesOldLiveData}"
                         android:text="Այո, հինը" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="@={vModel.hasBeforeWar10NoLiveData}"
                         android:text="Ոչ" />
                 </RadioGroup>
 
@@ -1226,10 +1334,11 @@
                     android:textSize="14sp"
                     android:textStyle="normal" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={vModel.hasBeforeWarOtherLiveData}" />
 
                 <Button
                     android:id="@+id/next"

@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.questionaryartsakh.MainActivity
 import com.example.questionaryartsakh.databinding.FragmentPartTreeBinding
-import com.example.questionaryartsakh.viewmodels.PartOneViewModel
+import com.example.questionaryartsakh.viewmodels.PartTreeViewModel
 
 class PartTreeFragment : Fragment() {
 
@@ -17,7 +17,7 @@ class PartTreeFragment : Fragment() {
         // Inflate the layout for this fragment
         return FragmentPartTreeBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
-            vModel = ViewModelProvider(this@PartTreeFragment)[PartOneViewModel::class.java]
+            vModel = ViewModelProvider(this@PartTreeFragment)[PartTreeViewModel::class.java]
             (activity as MainActivity).setSupportActionBar(toolbar)
             next.setOnClickListener { view?.findNavController()?.navigate(PartTreeFragmentDirections.actionPartTreeFragmentToPartFourFragment()) }
         }.root

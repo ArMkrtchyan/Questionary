@@ -850,6 +850,11 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
             currentOwner.otherCoast = it
         }
     }
+    var currentOwnerOtherSquareLiveData = MutableLiveData(currentOwner.otherSquare).apply {
+        observeForever {
+            currentOwner.otherSquare = it
+        }
+    }
     var currentOwnerOtherCountLiveData = MutableLiveData(currentOwner.otherCount).apply {
         observeForever {
             currentOwner.otherCount = it

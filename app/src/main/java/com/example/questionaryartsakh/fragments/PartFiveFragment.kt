@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.questionaryartsakh.MainActivity
 import com.example.questionaryartsakh.databinding.FragmentPartFiveBinding
-import com.example.questionaryartsakh.viewmodels.PartOneViewModel
+import com.example.questionaryartsakh.viewmodels.PartFiveViewModel
 
 class PartFiveFragment : Fragment() {
 
@@ -17,7 +17,7 @@ class PartFiveFragment : Fragment() {
         // Inflate the layout for this fragment
         return FragmentPartFiveBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
-            vModel = ViewModelProvider(this@PartFiveFragment)[PartOneViewModel::class.java]
+            vModel = ViewModelProvider(this@PartFiveFragment)[PartFiveViewModel::class.java]
             (activity as MainActivity).setSupportActionBar(toolbar)
             next.setOnClickListener { view?.findNavController()?.navigate(PartFiveFragmentDirections.actionPartFiveFragmentToPartSixFragment()) }
         }.root

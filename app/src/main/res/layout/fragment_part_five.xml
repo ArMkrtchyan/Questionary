@@ -7,7 +7,7 @@
 
         <variable
             name="vModel"
-            type="com.example.questionaryartsakh.viewmodels.PartOneViewModel" />
+            type="com.example.questionaryartsakh.viewmodels.PartFiveViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
