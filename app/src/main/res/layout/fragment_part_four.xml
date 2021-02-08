@@ -54,9 +54,9 @@
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatRadioButton
+                        android:checked="@={vModel.familyMaterialInsurance1LiveData}"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:checked="@={vModel.familyMaterialInsurance1LiveData}"
                         android:text="Եկամուտները չէին բավարարում անգամ սննդի ծախսերը հոգալու համար" />
 
                     <androidx.appcompat.widget.AppCompatRadioButton
@@ -137,12 +137,13 @@
                         android:text="Այլ պատասխան" />
 
                     <androidx.appcompat.widget.AppCompatEditText
+                        android:text="@={vModel.liveBeforeWarOtherLiveData}"
                         style="@style/InputStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/languages_layout_other_1"
                         android:hint=""
-                        android:text="@={vModel.liveBeforeWarOtherLiveData}" />
+                        />
                 </RadioGroup>
 
                 <TextView

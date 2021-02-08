@@ -1029,7 +1029,6 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
         }
     }
 
-    //////
     var livingPlaceAfterWar1LiveData = MutableLiveData(livingPlaceAfterWar.field1).apply {
         observeForever {
             livingPlaceAfterWar.field1 = it
@@ -1080,8 +1079,6 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
             livingPlaceAfterWarOther = it
         }
     }
-
-    ///
 
     var currentThings1LiveData = MutableLiveData(currentThings.field1).apply {
         observeForever {
@@ -1304,12 +1301,6 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
             home.field2 = it
         }
     }
-    var home3LiveData = MutableLiveData(home.field3).apply {
-        observeForever {
-            home.field3 = it
-        }
-    }
-
     var homeOtherFieldLiveData = MutableLiveData(home.other).apply {
         observeForever {
             home.other = it
@@ -1353,9 +1344,9 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
         }
     }
 
-    var owningOtherFieldLiveData = MutableLiveData(owning.other).apply {
+    var owningOtherFieldLiveData = MutableLiveData(owning.field7).apply {
         observeForever {
-            owning.other = it
+            owning.field7 = it
         }
     }
 
@@ -1441,9 +1432,9 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
             willLivePlace.other = it
         }
     }
-    var willLivePlaceOtherLiveData = MutableLiveData(owning.field6).apply {
+    var willLivePlaceOtherLiveData = MutableLiveData(owning.other).apply {
         observeForever {
-            owning.field6 = it
+            owning.other = it
         }
     }
     var futurePlans1LiveData = MutableLiveData(futurePlans.field1).apply {
