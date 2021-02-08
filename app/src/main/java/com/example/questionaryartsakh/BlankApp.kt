@@ -33,6 +33,11 @@ class BlankApp : Application() {
         return blank!!
     }
 
+    fun setBlank(blank: Blank): Blank {
+        this.blank = blank
+        return this.blank!!
+    }
+
     fun releaseBlank(): Blank {
         blank = null
         blank = Blank(0, 1)

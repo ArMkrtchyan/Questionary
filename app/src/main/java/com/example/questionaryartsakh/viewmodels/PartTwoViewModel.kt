@@ -16,42 +16,42 @@ class PartTwoViewModel : ViewModel() {
     var educationField5LiveData = blank.educationField5LiveData
     var educationField6LiveData = blank.educationField6LiveData
     var spacializationLiveData = blank.spacializationLiveData
-    var languageArmenianGoodLiveData = MutableLiveData(blank.languageArmenianLiveData.value == Blank.Languages.LevelEnum.GOOD.type).apply {
+    var languageArmenianGoodLiveData = MutableLiveData(blank.languages.armenian == Blank.Languages.LevelEnum.GOOD.type).apply {
         observeForever {
             if (it) blank.languageArmenianLiveData.postValue(Blank.Languages.LevelEnum.GOOD.type)
         }
     }
-    var languageArmenianMiddleLiveData = MutableLiveData(blank.languageArmenianLiveData.value == Blank.Languages.LevelEnum.MIDDLE.type).apply {
+    var languageArmenianMiddleLiveData = MutableLiveData(blank.languages.armenian == Blank.Languages.LevelEnum.MIDDLE.type).apply {
         observeForever {
             if (it) blank.languageArmenianLiveData.postValue(Blank.Languages.LevelEnum.MIDDLE.type)
         }
     }
-    var languageArmenianBadLiveData = MutableLiveData(blank.languageArmenianLiveData.value == Blank.Languages.LevelEnum.BAD.type).apply {
+    var languageArmenianBadLiveData = MutableLiveData(blank.languages.armenian == Blank.Languages.LevelEnum.BAD.type).apply {
         observeForever {
             if (it) blank.languageArmenianLiveData.postValue(Blank.Languages.LevelEnum.BAD.type)
         }
     }
-    var languageArmenianNonLiveData = MutableLiveData(blank.languageArmenianLiveData.value == Blank.Languages.LevelEnum.NONE.type).apply {
+    var languageArmenianNonLiveData = MutableLiveData(blank.languages.armenian == Blank.Languages.LevelEnum.NONE.type).apply {
         observeForever {
             if (it) blank.languageArmenianLiveData.postValue(Blank.Languages.LevelEnum.NONE.type)
         }
     }
-    var languageRussianLiveDataGoodLiveData = MutableLiveData(blank.languageRussianLiveData.value == Blank.Languages.LevelEnum.GOOD.type).apply {
+    var languageRussianLiveDataGoodLiveData = MutableLiveData(blank.languages.russian == Blank.Languages.LevelEnum.GOOD.type).apply {
         observeForever {
             if (it) blank.languageRussianLiveData.postValue(Blank.Languages.LevelEnum.GOOD.type)
         }
     }
-    var languageRussianLiveDataMiddleLiveData = MutableLiveData(blank.languageRussianLiveData.value == Blank.Languages.LevelEnum.MIDDLE.type).apply {
+    var languageRussianLiveDataMiddleLiveData = MutableLiveData(blank.languages.russian == Blank.Languages.LevelEnum.MIDDLE.type).apply {
         observeForever {
             if (it) blank.languageRussianLiveData.postValue(Blank.Languages.LevelEnum.MIDDLE.type)
         }
     }
-    var languageRussianLiveDataBadLiveData = MutableLiveData(blank.languageRussianLiveData.value == Blank.Languages.LevelEnum.BAD.type).apply {
+    var languageRussianLiveDataBadLiveData = MutableLiveData(blank.languages.russian == Blank.Languages.LevelEnum.BAD.type).apply {
         observeForever {
             if (it) blank.languageRussianLiveData.postValue(Blank.Languages.LevelEnum.BAD.type)
         }
     }
-    var languageRussianLiveDataNonLiveData = MutableLiveData(blank.languageRussianLiveData.value == Blank.Languages.LevelEnum.NONE.type).apply {
+    var languageRussianLiveDataNonLiveData = MutableLiveData(blank.languages.russian == Blank.Languages.LevelEnum.NONE.type).apply {
         observeForever {
             if (it) blank.languageRussianLiveData.postValue(Blank.Languages.LevelEnum.NONE.type)
         }

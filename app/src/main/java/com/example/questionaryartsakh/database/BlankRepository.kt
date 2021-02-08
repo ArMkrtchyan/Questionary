@@ -3,6 +3,7 @@ package com.example.questionaryartsakh.database
 import com.example.questionaryartsakh.Blank
 import com.example.questionaryartsakh.BlankApp
 import com.example.questionaryartsakh.database.entity.BlankEntity
+import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
@@ -15,19 +16,25 @@ class BlankRepository {
 
     private val blankDao = BlankApp.getInstance().getBlankDb().blankDao()
 
-    suspend fun insertBlank(Blank: BlankEntity, mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
+    suspend fun insertBlank(blank: BlankEntity, mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
         mFlow(flow {
-            //  emit(BlanksMapper.BlankEntitiesToBlanks(BlankDao.getAllBlanks()))
-            emit(arrayListOf<Blank>())
+            val blanks = arrayListOf<Blank>()
+            blankDao.getAllBlanks().map {
+                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java))
+            }
+            emit(blanks)
         }.onStart {
-            blankDao.insert(Blank)
+            blankDao.insert(blank)
         }.flowOn(Dispatchers.IO))
     }
 
     suspend fun findAllBlanks(mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
         mFlow(flow {
-            //   emit(BlanksMapper.BlankEntitiesToBlanks(BlankDao.getAllBlanks()))
-            emit(arrayListOf<Blank>())
+            val blanks = arrayListOf<Blank>()
+            blankDao.getAllBlanks().map {
+                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java))
+            }
+            emit(blanks)
         }.flowOn(Dispatchers.IO))
     }
 
@@ -41,8 +48,11 @@ class BlankRepository {
 
     suspend fun deleteBlank(Blank: BlankEntity, mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
         mFlow(flow {
-            //  emit(BlanksMapper.BlankEntitiesToBlanks(BlankDao.getAllBlanks()))
-            emit(arrayListOf<Blank>())
+            val blanks = arrayListOf<Blank>()
+            blankDao.getAllBlanks().map {
+                blanks.add(Gson().fromJson(it.blankJson, com.example.questionaryartsakh.Blank::class.java))
+            }
+            emit(blanks)
         }.onStart {
             blankDao.deleteBlank(Blank)
         }.flowOn(Dispatchers.IO))

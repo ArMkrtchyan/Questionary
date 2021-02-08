@@ -6,7 +6,7 @@ import com.example.questionaryartsakh.database.entity.BlankEntity
 @Dao
 interface BlankDao {
 
-    @Query("SELECT * from blanks ORDER BY last_message_date DESC")
+    @Query("SELECT * from blanks ORDER BY id DESC")
     suspend fun getAllBlanks(): List<BlankEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -2,6 +2,8 @@ package com.example.questionaryartsakh
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.example.questionaryartsakh.utils.toJson
+import com.google.gson.Gson
 
 data class Blank(var id: Int, var status: Int, var telephone: String = "", var dateOfBirthDay: String = "", var fullName: String = "", var date: String = "",
     var birthPlace: String = "", var livingPlaceBeforeWar: String = "", var addressInArcakh: String = "", var livingTime: String = "", var familyCount: String = "",
@@ -74,7 +76,9 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
         var field6: Boolean = false, var field7: Boolean = false, var field8: Boolean = false, var field9: Boolean = false, var field10: Boolean = false,
         var field11: Boolean = false, var field12: Boolean = false, var field13: Boolean = false, var field14: Boolean = false, var field15: Boolean = false,
         var field16: Boolean = false, var field17: Boolean = false, var field18: Boolean = false, var field19: Boolean = false, var field20: Boolean = false,
-        var other: Boolean = false)
+        var other: Boolean = false) {
+
+    }
 
     //Page 1
 
@@ -1560,6 +1564,12 @@ data class Blank(var id: Int, var status: Int, var telephone: String = "", var d
         observeForever {
             other = it
         }
+    }
+
+    fun toJson(): String {
+        return "{\"id\":$id, \"status\":$status, \"telephone\":\"$telephone\", \"dateOfBirthDay\":\"$dateOfBirthDay\", \"fullName\":\"$fullName\",\"date\":\"$date\", \"birthPlace\":\"$birthPlace\", \"livingPlaceBeforeWar\":\"$livingPlaceBeforeWar\", \"addressInArcakh\":\"$addressInArcakh\", \"livingTime\":\"$livingTime\", \"familyCount\":\"$familyCount\", \"familyMaleCount\":\"$familyMaleCount\", \"familyUnder18Count\":\"$familyUnder18Count\", \"familyGenCount\":\"$familyGenCount\", \"familyMembers\":${
+            familyMembers.toJson()
+        }, \"education\":${education.toJson()}, \"languages\":${languages.toJson()}, \"langOther1\":\"$langOther1\", \"langOther2\":\"$langOther2\", \"spacialization\":\"$spacialization\", \"computerSkill\":$computerSkill, \"driveCar\":$driveCar, \"work\":${work.toJson()}, \"workPlace\":${workPlace.toJson()}, \"self_employment\":\"$self_employment\", \"otherWorkPlace\":\"$otherWorkPlace\", \"workField\":${workField.toJson()}, \"workFieldOther\":\"$workFieldOther\", \"workStatus\":${workStatus.toJson()}, \"workStatusOther\":\"$workStatusOther\", \"workDurationInField\":\"$workDurationInField\", \"workDurationInOrganization\":\"$workDurationInOrganization\", \"workDurationInPosition\":\"$workDurationInPosition\", \"workProgress\":${workProgress.toJson()}, \"familyMonthlyIncome\":\"$familyMonthlyIncome\", \"monthlyIncome\":\"$monthlyIncome\", \"familyIncomeSource\":${familyIncomeSource.toJson()}, \"familyIncomeOther\":\"$familyIncomeOther\", \"familyMaterialInsurance\":${familyMaterialInsurance.toJson()}, \"liveBeforeWar\":${liveBeforeWar.toJson()}, \"liveBeforeWarOther\":\"$liveBeforeWarOther\", \"currentOwner\":${currentOwner.toJson()}, \"hasBeforeWar\":${hasBeforeWar.toJson()}, \"hasBeforeWarPlace\":\"$hasBeforeWarPlace\", \"livingPlaceLeaveTime\":\"$livingPlaceLeaveTime\", \"countOfFamilyMembersInArmenia\":\"$countOfFamilyMembersInArmenia\", \"countOfFamilyMembersInArcakh\":\"$countOfFamilyMembersInArcakh\", \"countOfDeathFamilyMembers\":\"$countOfDeathFamilyMembers\", \"leaveReason\":${leaveReason.toJson()}, \"leaveReasonOther\":\"$leaveReasonOther\", \"leavePath\":${leavePath.toJson()}, \"leavePathOther\":\"$leavePathOther\", \"currentLivingPlace\":\"$currentLivingPlace\", \"livingPlaceAfterWar\":${livingPlaceAfterWar.toJson()}, \"temporaryLivingPlaceAfterWar\":\"$temporaryLivingPlaceAfterWar\", \"livingPlaceAfterWarOther\":\"$livingPlaceAfterWarOther\", \"currentThings\":${currentThings.toJson()}, \"currentThingsOther\":\"$currentThingsOther\", \"currentThingsInNow\":${currentThingsInNow.toJson()}, \"currentThingsInNowOther\":\"$currentThingsInNowOther\", \"materialHelp\":${materialHelp.toJson()}, \"materialHelpOther\":\"$materialHelpOther\", \"home\":${home.toJson()}, \"homeOther\":\"$homeOther\", \"owning\":${owning.toJson()}, \"owningNowOther\":\"$owningNowOther\", \"willLivePlace\":${willLivePlace.toJson()}, \"willLivePlaceArcakhOther\":\"$willLivePlaceArcakhOther\", \"willLivePlaceTemporaryArmenia\":\"$willLivePlaceTemporaryArmenia\", \"willLivePlaceArmenia\":\"$willLivePlaceArmenia\", \"willLivePlaceAPH\":\"$willLivePlaceAPH\", \"willLivePlaceEurope\":\"$willLivePlaceEurope\", \"willLivePlaceOther\":\"$willLivePlaceOther\", \"futurePlans\":${futurePlans.toJson()}, \"alreadyWork\":\"$alreadyWork\", \"futurePlansOther\":\"$futurePlansOther\", \"passport\":${passport.toJson()}, \"passportOther\":\"$passportOther\", \"maried\":${maried.toJson()}, \"mariedOther\":\"$mariedOther\", \"years\":\"$years\", \"gender\":${gender.toJson()}, \"other\":\"$other\"}"
     }
 
 }

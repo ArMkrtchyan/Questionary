@@ -7,7 +7,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.MutableLiveData
+import com.example.questionaryartsakh.Blank
 import com.example.questionaryartsakh.R
+import com.google.gson.Gson
 
 fun View.invisible() {
     visibility = View.INVISIBLE
@@ -60,5 +62,19 @@ object ViewExtansions {
             value.value = it.toString()
         }
     }
+
+}
+
+fun Blank.Languages.toJson(): String {
+    return Gson().toJson(this)
+}
+fun Blank.Owner.toJson(): String {
+    return Gson().toJson(this)
+}
+fun Blank.SubFieldsMultiple.toJson(): String {
+    return Gson().toJson(this)
+}
+fun Blank.SubFields.toJson(): String {
+    return Gson().toJson(this)
 }
 
