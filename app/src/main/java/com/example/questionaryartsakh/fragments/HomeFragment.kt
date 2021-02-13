@@ -1,7 +1,6 @@
 package com.example.questionaryartsakh.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +15,7 @@ import com.example.questionaryartsakh.database.BlankRepository
 import com.example.questionaryartsakh.database.entity.BlankEntity
 import com.example.questionaryartsakh.databinding.FragmentHomeBinding
 import com.example.questionaryartsakh.utils.DialogUtil
-import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
@@ -24,60 +23,45 @@ import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
-    companion object {
-
-        var isEditMode = false
-    }
-
     private lateinit var mBinding: FragmentHomeBinding
 
     @ExperimentalCoroutinesApi
     private val repository by lazy { BlankRepository() }
     private val mBlanks = ArrayList<Blank>()
-    private val adapter by lazy {
-        AdapterBlanks(this::edit, this::send, this::delete, this::show).apply {
-            submitList(ArrayList<Blank>().apply {
-                addAll(mBlanks)
-            })
-        }
-    }
+
+    @ExperimentalCoroutinesApi
+    private val adapter by lazy { AdapterBlanks(this::edit, this::send, this::delete, this::show) }
 
     @ExperimentalCoroutinesApi
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        if (!::mBinding.isInitialized) mBinding = FragmentHomeBinding.inflate(inflater, container, false).apply {
+        mBinding = FragmentHomeBinding.inflate(inflater, container, false).apply {
             add.setOnClickListener {
                 view?.findNavController()?.navigate(HomeFragmentDirections.actionHomeFragmentToPartOneFragment())
             }
-            val json = BlankApp.getInstance().getBlank().toJson()
-            val bl: Blank = Gson().fromJson(json, Blank::class.java)
-            Log.i("data", bl.toJson())
             blanks.adapter = adapter
         }
         return mBinding.root
     }
 
+    @ExperimentalCoroutinesApi
     override fun onResume() {
         super.onResume()
         BlankApp.getInstance().releaseBlank()
-        lifecycleScope.launch {
-            isEditMode = false
+        lifecycleScope.launch(Dispatchers.Main) {
             repository.findAllBlanks {
                 it.collect { list ->
                     mBinding.isEmpty = list.isEmpty()
-                    adapter.submitList(ArrayList<Blank>().apply {
-                        mBlanks.clear()
-                        mBlanks.addAll(list)
-                        addAll(mBlanks)
-                    })
-                    adapter.notifyDataSetChanged()
+                    mBlanks.clear()
+                    mBlanks.addAll(list)
+                    adapter.submitList(list)
+
                 }
             }
         }
     }
 
     private fun edit(blank: Blank) {
-        isEditMode = true
         BlankApp.getInstance().setBlank(blank)
         view?.findNavController()?.navigate(HomeFragmentDirections.actionHomeFragmentToPartOneFragment())
     }
@@ -96,19 +80,16 @@ class HomeFragment : Fragment() {
 
     @ExperimentalCoroutinesApi
     private fun delete(blank: Blank) {
-        val description = if (blank.status != 3) "Դուք դեռ չեք ուղարկել հարցաթերթիկը։ Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը:" else "Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը"
+        val description =
+            if (blank.status != 3) "Դուք դեռ չեք ուղարկել հարցաթերթիկը։ Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը:" else "Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը"
         DialogUtil.deleteDialog(requireActivity(), description) {
-            lifecycleScope.launch {
+            lifecycleScope.launch(Dispatchers.Main) {
                 repository.deleteBlank(BlankEntity(id = blank.id, blankJson = blank.toJson())) {
                     it.collect { list ->
                         mBinding.isEmpty = list.isEmpty()
-
-                        adapter.submitList(ArrayList<Blank>().apply {
-                            mBlanks.clear()
-                            mBlanks.addAll(list)
-                            addAll(mBlanks)
-                        })
-                        adapter.notifyDataSetChanged()
+                        mBlanks.clear()
+                        mBlanks.addAll(list)
+                        adapter.submitList(list)
                     }
                 }
             }

@@ -2,22 +2,13 @@ package com.example.questionaryartsakh
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.questionaryartsakh.databinding.AdapterBlankItemBinding
 
 class AdapterBlanks(val fEdit: (Blank) -> Unit, val fSend: (Blank) -> Unit, val fDelete: (Blank) -> Unit, val fShow: (Blank) -> Unit) :
-    ListAdapter<Blank, AdapterBlanks.BlankViewHolder>(object : DiffUtil.ItemCallback<Blank>() {
-        override fun areItemsTheSame(oldItem: Blank, newItem: Blank): Boolean {
-            return oldItem.id == newItem.id
-        }
+    RecyclerView.Adapter<AdapterBlanks.BlankViewHolder>() {
 
-        override fun areContentsTheSame(oldItem: Blank, newItem: Blank): Boolean {
-            return oldItem.id == newItem.id
-        }
-
-    }) {
+    val data = arrayListOf<Blank>()
 
     class BlankViewHolder(val mBinding: AdapterBlankItemBinding) : RecyclerView.ViewHolder(mBinding.root)
 
@@ -28,12 +19,20 @@ class AdapterBlanks(val fEdit: (Blank) -> Unit, val fSend: (Blank) -> Unit, val 
     override fun onBindViewHolder(holder: BlankViewHolder, position: Int) {
         holder.setIsRecyclable(false)
         holder.mBinding.apply {
-            blank = getItem(position)
-            root.setOnClickListener { fShow.invoke(getItem(position)) }
-            send.setOnClickListener { fSend.invoke(getItem(position)) }
-            edit.setOnClickListener { fEdit.invoke(getItem(position)) }
-            delete.setOnClickListener { fDelete.invoke(getItem(position)) }
+            blank = data[position]
+            root.setOnClickListener { fShow.invoke(data[position]) }
+            send.setOnClickListener { fSend.invoke(data[position]) }
+            edit.setOnClickListener { fEdit.invoke(data[position]) }
+            delete.setOnClickListener { fDelete.invoke(data[position]) }
         }
 
+    }
+
+    override fun getItemCount(): Int = data.size
+
+    fun submitList(list: List<Blank>) {
+        data.clear()
+        data.addAll(list)
+        notifyDataSetChanged()
     }
 }
