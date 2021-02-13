@@ -12,7 +12,7 @@ class BlankApp : Application() {
     }
 
     private var chatDb: BlankDB? = null
-    private var blank: Blank? = Blank(0, 1)
+    private var blank: Blank? = Blank()
 
     override fun onCreate() {
         super.onCreate()

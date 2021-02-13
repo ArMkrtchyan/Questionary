@@ -15,15 +15,16 @@ import com.example.questionaryartsakh.database.BlankRepository
 import com.example.questionaryartsakh.database.entity.BlankEntity
 import com.example.questionaryartsakh.databinding.FragmentPartSixBinding
 import com.example.questionaryartsakh.viewmodels.PartSixViewModel
-import com.google.gson.Gson
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import java.util.*
 
 class PartSixFragment : Fragment() {
 
     @ExperimentalCoroutinesApi
     private val repository by lazy { BlankRepository() }
+
     @ExperimentalCoroutinesApi
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -33,9 +34,9 @@ class PartSixFragment : Fragment() {
             (activity as MainActivity).setSupportActionBar(toolbar)
             next.setOnClickListener {
                 lifecycleScope.launch {
-                    val json = BlankApp.getInstance().getBlank().toJson()
+                    val json = BlankApp.getInstance().getBlank().apply { createdAt = Date().time }.toJson()
                     Log.i("data", json)
-                    repository.insertBlank(BlankEntity(blankJson = json)){
+                    repository.insertBlank(BlankEntity(id = BlankApp.getInstance().getBlank().id, blankJson = json)) {
                         it.collect {
                             view?.findNavController()?.navigate(PartSixFragmentDirections.actionPartSixFragmentToHomeFragment())
                         }

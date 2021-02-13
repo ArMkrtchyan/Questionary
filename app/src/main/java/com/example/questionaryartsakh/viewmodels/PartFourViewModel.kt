@@ -9,400 +9,576 @@ class PartFourViewModel : ViewModel() {
 
     private val blank = BlankApp.getInstance().getBlank()
 
-    var familyMaterialInsurance1LiveData = blank.familyMaterialInsurance1LiveData
-    var familyMaterialInsurance2LiveData = blank.familyMaterialInsurance2LiveData
-    var familyMaterialInsurance3LiveData = blank.familyMaterialInsurance3LiveData
-    var familyMaterialInsurance4LiveData = blank.familyMaterialInsurance4LiveData
-    var familyMaterialInsurance5LiveData = blank.familyMaterialInsurance5LiveData
-    var familyMaterialInsurance6LiveData = blank.familyMaterialInsurance6LiveData
-    var liveBeforeWar1LiveData = blank.liveBeforeWar1LiveData
-    var liveBeforeWar2LiveData = blank.liveBeforeWar2LiveData
-    var liveBeforeWar3LiveData = blank.liveBeforeWar3LiveData
-    var liveBeforeWar4LiveData = blank.liveBeforeWar4LiveData
-    var liveBeforeWar5LiveData = blank.liveBeforeWar5LiveData
-    var liveBeforeWarOtherLiveData = blank.liveBeforeWarOtherLiveData
-    var currentOwnerCarMineLiveData = MutableLiveData(blank.currentOwnerCarLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
+    var familyMaterialInsurance1LiveData = MutableLiveData(blank.familyMaterialInsurance.field1).apply {
         observeForever {
-            if (it) blank.currentOwnerCarLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
+            blank.familyMaterialInsurance.field1 = it
         }
     }
-    var currentOwnerCarNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerCarLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+    var familyMaterialInsurance2LiveData = MutableLiveData(blank.familyMaterialInsurance.field2).apply {
         observeForever {
-            if (it) blank.currentOwnerCarLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
+            blank.familyMaterialInsurance.field2 = it
         }
     }
-    var currentOwnerCarNonLiveData = MutableLiveData(blank.currentOwnerCarLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
+    var familyMaterialInsurance3LiveData = MutableLiveData(blank.familyMaterialInsurance.field3).apply {
         observeForever {
-            if (it) blank.currentOwnerCarLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
+            blank.familyMaterialInsurance.field3 = it
         }
     }
-    var currentOwnerCarPriceLiveData = blank.currentOwnerCarPriceLiveData
-    var currentOwnerCarCountLiveData = blank.currentOwnerCarCountLiveData
-
-    var currentOwnerGarageMineLiveData = MutableLiveData(blank.currentOwnerGarageLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
+    var familyMaterialInsurance4LiveData = MutableLiveData(blank.familyMaterialInsurance.field4).apply {
         observeForever {
-            if (it) blank.currentOwnerGarageLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
+            blank.familyMaterialInsurance.field4 = it
         }
     }
-    var currentOwnerGarageNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerGarageLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+    var familyMaterialInsurance5LiveData = MutableLiveData(blank.familyMaterialInsurance.field5).apply {
         observeForever {
-            if (it) blank.currentOwnerGarageLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
+            blank.familyMaterialInsurance.field5 = it
         }
     }
-    var currentOwnerGarageNonLiveData = MutableLiveData(blank.currentOwnerGarageLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
+    var familyMaterialInsurance6LiveData = MutableLiveData(blank.familyMaterialInsurance.field6).apply {
         observeForever {
-            if (it) blank.currentOwnerGarageLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
+            blank.familyMaterialInsurance.field6 = it
         }
     }
-    var currentOwnerGaragePriceLiveData = blank.currentOwnerGaragePriceLiveData
-    var currentOwnerGarageSquareLiveData = blank.currentOwnerGarageSquareLiveData
-    var currentOwnerGarageCountLiveData = blank.currentOwnerGarageCountLiveData
-
-    var currentOwnerHomeMineLiveData = MutableLiveData(blank.currentOwnerHomeLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
+    var liveBeforeWar1LiveData = MutableLiveData(blank.liveBeforeWar.field1).apply {
         observeForever {
-            if (it) blank.currentOwnerHomeLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
+            blank.liveBeforeWar.field1 = it
         }
     }
-    var currentOwnerHomeNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerHomeLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+    var liveBeforeWar2LiveData = MutableLiveData(blank.liveBeforeWar.field2).apply {
         observeForever {
-            if (it) blank.currentOwnerHomeLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
+            blank.liveBeforeWar.field2 = it
         }
     }
-    var currentOwnerHomeNonLiveData = MutableLiveData(blank.currentOwnerHomeLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
+    var liveBeforeWar3LiveData = MutableLiveData(blank.liveBeforeWar.field3).apply {
         observeForever {
-            if (it) blank.currentOwnerHomeLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
+            blank.liveBeforeWar.field3 = it
         }
     }
-    var currentOwnerHomePriceLiveData = blank.currentOwnerHomePriceLiveData
-    var currentOwnerHomeSquareLiveData = blank.currentOwnerHomeSquareLiveData
-    var currentOwnerHomeCountLiveData = blank.currentOwnerHomeCountLiveData
-
-    var currentOwnerDachaMineLiveData = MutableLiveData(blank.currentOwnerDachaLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
+    var liveBeforeWar4LiveData = MutableLiveData(blank.liveBeforeWar.field4).apply {
         observeForever {
-            if (it) blank.currentOwnerDachaLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
+            blank.liveBeforeWar.field4 = it
         }
     }
-    var currentOwnerDachaNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerDachaLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+    var liveBeforeWar5LiveData = MutableLiveData(blank.liveBeforeWar.field5).apply {
         observeForever {
-            if (it) blank.currentOwnerDachaLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
+            blank.liveBeforeWar.field5 = it
         }
     }
-    var currentOwnerDachaNonLiveData = MutableLiveData(blank.currentOwnerDachaLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
+    var liveBeforeWarOtherLiveData = MutableLiveData(blank.liveBeforeWarOther).apply {
         observeForever {
-            if (it) blank.currentOwnerDachaLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
+            blank.liveBeforeWarOther = it
         }
     }
-    var currentOwnerDachaPriceLiveData = blank.currentOwnerDachaPriceLiveData
-    var currentOwnerDachaSquareLiveData = blank.currentOwnerDachaSquareLiveData
-    var currentOwnerDachaCountLiveData = blank.currentOwnerDachaCountLiveData
-
-    var currentOwnerOrganizationMineLiveData = MutableLiveData(blank.currentOwnerOrganizationLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
+    var currentOwnerCarMineLiveData = MutableLiveData(blank.currentOwner.car == Blank.Owner.OwnerEnum.MINE.type).apply {
         observeForever {
-            if (it) blank.currentOwnerOrganizationLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
+            if (it) blank.currentOwner.car = Blank.Owner.OwnerEnum.MINE.type
         }
     }
-    var currentOwnerOrganizationNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerOrganizationLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+    var currentOwnerCarNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.car == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
         observeForever {
-            if (it) blank.currentOwnerOrganizationLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
+            if (it) blank.currentOwner.car = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
         }
     }
-    var currentOwnerOrganizationNonLiveData = MutableLiveData(blank.currentOwnerOrganizationLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
+    var currentOwnerCarNonLiveData = MutableLiveData(blank.currentOwner.car == Blank.Owner.OwnerEnum.NONE.type).apply {
         observeForever {
-            if (it) blank.currentOwnerOrganizationLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
+            if (it) blank.currentOwner.car = Blank.Owner.OwnerEnum.NONE.type
         }
     }
-    var currentOwnerOrganizationPriceLiveData = blank.currentOwnerOrganizationPriceLiveData
-    var currentOwnerOrganizationSquareLiveData = blank.currentOwnerOrganizationSquareLiveData
-    var currentOwnerOrganizationCountLiveData = blank.currentOwnerOrganizationCountLiveData
-
-    var currentOwnerPlaceMineLiveData = MutableLiveData(blank.currentOwnerPlaceLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
+    var currentOwnerCarPriceLiveData = MutableLiveData(blank.currentOwner.carCoast).apply {
         observeForever {
-            if (it) blank.currentOwnerPlaceLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
+            blank.currentOwner.carCoast = it
         }
     }
-    var currentOwnerPlaceNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerPlaceLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+    var currentOwnerCarCountLiveData = MutableLiveData(blank.currentOwner.carCount).apply {
         observeForever {
-            if (it) blank.currentOwnerPlaceLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerPlaceNonLiveData = MutableLiveData(blank.currentOwnerPlaceLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerPlaceLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerPlacePriceLiveData = blank.currentOwnerPlacePriceLiveData
-    var currentOwnerPlaceSquareLiveData = blank.currentOwnerPlaceSquareLiveData
-    var currentOwnerPlaceCountLiveData = blank.currentOwnerPlaceCountLiveData
-
-    var currentOwnerMoneyMineLiveData = MutableLiveData(blank.currentOwnerMoneyLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerMoneyLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
-        }
-    }
-    var currentOwnerMoneyNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerMoneyLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerMoneyLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerMoneyNonLiveData = MutableLiveData(blank.currentOwnerMoneyLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerMoneyLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerMoneyPriceLiveData = blank.currentOwnerMoneyPriceLiveData
-    var currentOwnerMoneyCountLiveData = blank.currentOwnerMoneyCountLiveData
-
-    var currentOwnerAvandMineLiveData = MutableLiveData(blank.currentOwnerAvandLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerAvandLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
-        }
-    }
-    var currentOwnerAvandNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerAvandLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerAvandLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerAvandNonLiveData = MutableLiveData(blank.currentOwnerAvandLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerAvandLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerAvandPriceLiveData = blank.currentOwnerAvandPriceLiveData
-    var currentOwnerAvandCountLiveData = blank.currentOwnerAvandCountLiveData
-
-    var currentOwnerHipotekMineLiveData = MutableLiveData(blank.currentOwnerHipotekLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerHipotekLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
-        }
-    }
-    var currentOwnerHipotekNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerHipotekLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerHipotekLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerHipotekNonLiveData = MutableLiveData(blank.currentOwnerHipotekLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerHipotekLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerHipotekPriceLiveData = blank.currentOwnerHipotekPriceLiveData
-    var currentOwnerHipotekCountLiveData = blank.currentOwnerHipotekCountLiveData
-
-    var currentOwnerGoldsMineLiveData = MutableLiveData(blank.currentOwnerGoldsLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerGoldsLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
-        }
-    }
-    var currentOwnerGoldsNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerGoldsLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerGoldsLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerGoldsNonLiveData = MutableLiveData(blank.currentOwnerGoldsLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerGoldsLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerGoldsPriceLiveData = blank.currentOwnerGoldsPriceLiveData
-    var currentOwnerGoldsCountLiveData = blank.currentOwnerGoldsCountLiveData
-
-    var currentOwnerArjetuxtMineLiveData = MutableLiveData(blank.currentOwnerArjetuxtLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerArjetuxtLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
-        }
-    }
-    var currentOwnerArjetuxtNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerArjetuxtLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerArjetuxtLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerArjetuxtNonLiveData = MutableLiveData(blank.currentOwnerArjetuxtLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerArjetuxtLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerArjetuxtPriceLiveData = blank.currentOwnerArjetuxtPriceLiveData
-    var currentOwnerArjetuxtCountLiveData = blank.currentOwnerArjetuxtCountLiveData
-
-    var currentOwnerOtherMineLiveData = MutableLiveData(blank.currentOwnerOtherLiveData.value == Blank.Owner.OwnerEnum.MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerOtherLiveData.postValue(Blank.Owner.OwnerEnum.MINE.type)
-        }
-    }
-    var currentOwnerOtherNotOnlyMineLiveData = MutableLiveData(blank.currentOwnerOtherLiveData.value == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerOtherLiveData.postValue(Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type)
-        }
-    }
-    var currentOwnerOtherNonLiveData = MutableLiveData(blank.currentOwnerOtherLiveData.value == Blank.Owner.OwnerEnum.NONE.type).apply {
-        observeForever {
-            if (it) blank.currentOwnerOtherLiveData.postValue(Blank.Owner.OwnerEnum.NONE.type)
-        }
-    }
-    var currentOwnerOtherNameLiveData = blank.currentOwnerOtherNameLiveData
-    var currentOwnerOtherPriceLiveData = blank.currentOwnerOtherPriceLiveData
-    var currentOwnerOtherSquareLiveData = blank.currentOwnerOtherSquareLiveData
-    var currentOwnerOtherCountLiveData = blank.currentOwnerOtherCountLiveData
-
-    var hasBeforeWar1YesNewLiveData = MutableLiveData(blank.hasBeforeWar1LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar1LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var hasBeforeWar1YesOldLiveData = MutableLiveData(blank.hasBeforeWar1LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar1LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
-        }
-    }
-    var hasBeforeWar1NoLiveData = MutableLiveData(blank.hasBeforeWar1LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar1LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            blank.currentOwner.carCount = it
         }
     }
 
-    var hasBeforeWar2YesNewLiveData = MutableLiveData(blank.hasBeforeWar2LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerGarageMineLiveData = MutableLiveData(blank.currentOwner.garage == Blank.Owner.OwnerEnum.MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar2LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.currentOwner.garage = Blank.Owner.OwnerEnum.MINE.type
         }
     }
-    var hasBeforeWar2YesOldLiveData = MutableLiveData(blank.hasBeforeWar2LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerGarageNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.garage == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar2LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            if (it) blank.currentOwner.garage = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
         }
     }
-    var hasBeforeWar2NoLiveData = MutableLiveData(blank.hasBeforeWar2LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerGarageNonLiveData = MutableLiveData(blank.currentOwner.garage == Blank.Owner.OwnerEnum.NONE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar2LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            if (it) blank.currentOwner.garage = Blank.Owner.OwnerEnum.NONE.type
         }
     }
-
-    var hasBeforeWar3YesNewLiveData = MutableLiveData(blank.hasBeforeWar3LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerGaragePriceLiveData = MutableLiveData(blank.currentOwner.garageCoast).apply {
         observeForever {
-            if (it) blank.hasBeforeWar3LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            blank.currentOwner.garageCoast = it
         }
     }
-    var hasBeforeWar3YesOldLiveData = MutableLiveData(blank.hasBeforeWar3LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerGarageSquareLiveData = MutableLiveData(blank.currentOwner.garageSquare).apply {
         observeForever {
-            if (it) blank.hasBeforeWar3LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            blank.currentOwner.garageSquare = it
         }
     }
-    var hasBeforeWar3NoLiveData = MutableLiveData(blank.hasBeforeWar3LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerGarageCountLiveData = MutableLiveData(blank.currentOwner.garageCount).apply {
         observeForever {
-            if (it) blank.hasBeforeWar3LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
-        }
-    }
-
-    var hasBeforeWar4YesNewLiveData = MutableLiveData(blank.hasBeforeWar4LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar4LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var hasBeforeWar4YesOldLiveData = MutableLiveData(blank.hasBeforeWar4LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar4LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
-        }
-    }
-    var hasBeforeWar4NoLiveData = MutableLiveData(blank.hasBeforeWar4LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar4LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            blank.currentOwner.garageCount = it
         }
     }
 
-    var hasBeforeWar5YesNewLiveData = MutableLiveData(blank.hasBeforeWar5LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerHomeMineLiveData = MutableLiveData(blank.currentOwner.home == Blank.Owner.OwnerEnum.MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar5LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.currentOwner.home = Blank.Owner.OwnerEnum.MINE.type
         }
     }
-    var hasBeforeWar5YesOldLiveData = MutableLiveData(blank.hasBeforeWar5LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerHomeNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.home == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar5LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            if (it) blank.currentOwner.home = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
         }
     }
-    var hasBeforeWar5NoLiveData = MutableLiveData(blank.hasBeforeWar5LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerHomeNonLiveData = MutableLiveData(blank.currentOwner.home == Blank.Owner.OwnerEnum.NONE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar5LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            if (it) blank.currentOwner.home = Blank.Owner.OwnerEnum.NONE.type
         }
     }
-
-    var hasBeforeWar6YesNewLiveData = MutableLiveData(blank.hasBeforeWar6LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerHomePriceLiveData = MutableLiveData(blank.currentOwner.homeCoast).apply {
         observeForever {
-            if (it) blank.hasBeforeWar6LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            blank.currentOwner.homeCoast = it
         }
     }
-    var hasBeforeWar6YesOldLiveData = MutableLiveData(blank.hasBeforeWar6LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerHomeSquareLiveData = MutableLiveData(blank.currentOwner.homeSquare).apply {
         observeForever {
-            if (it) blank.hasBeforeWar6LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            blank.currentOwner.homeSquare = it
         }
     }
-    var hasBeforeWar6NoLiveData = MutableLiveData(blank.hasBeforeWar6LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerHomeCountLiveData = MutableLiveData(blank.currentOwner.homeCount).apply {
         observeForever {
-            if (it) blank.hasBeforeWar6LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
-        }
-    }
-
-    var hasBeforeWar7YesNewLiveData = MutableLiveData(blank.hasBeforeWar7LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar7LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var hasBeforeWar7YesOldLiveData = MutableLiveData(blank.hasBeforeWar7LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar7LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
-        }
-    }
-    var hasBeforeWar7NoLiveData = MutableLiveData(blank.hasBeforeWar7LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
-        observeForever {
-            if (it) blank.hasBeforeWar7LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            blank.currentOwner.homeCount = it
         }
     }
 
-    var hasBeforeWar8YesNewLiveData = MutableLiveData(blank.hasBeforeWar8LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerDachaMineLiveData = MutableLiveData(blank.currentOwner.dacha == Blank.Owner.OwnerEnum.MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar8LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.currentOwner.dacha = Blank.Owner.OwnerEnum.MINE.type
         }
     }
-    var hasBeforeWar8YesOldLiveData = MutableLiveData(blank.hasBeforeWar8LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerDachaNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.dacha == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar8LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            if (it) blank.currentOwner.dacha = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
         }
     }
-    var hasBeforeWar8NoLiveData = MutableLiveData(blank.hasBeforeWar8LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerDachaNonLiveData = MutableLiveData(blank.currentOwner.dacha == Blank.Owner.OwnerEnum.NONE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar8LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            if (it) blank.currentOwner.dacha = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerDachaPriceLiveData = MutableLiveData(blank.currentOwner.dachaCoast).apply {
+        observeForever {
+            blank.currentOwner.dachaCoast = it
+        }
+    }
+    var currentOwnerDachaSquareLiveData = MutableLiveData(blank.currentOwner.dachaSquare).apply {
+        observeForever {
+            blank.currentOwner.dachaSquare = it
+        }
+    }
+    var currentOwnerDachaCountLiveData = MutableLiveData(blank.currentOwner.dachaCount).apply {
+        observeForever {
+            blank.currentOwner.dachaCount = it
         }
     }
 
-    var hasBeforeWar9YesNewLiveData = MutableLiveData(blank.hasBeforeWar9LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerOrganizationMineLiveData = MutableLiveData(blank.currentOwner.organization == Blank.Owner.OwnerEnum.MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar9LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.currentOwner.organization = Blank.Owner.OwnerEnum.MINE.type
         }
     }
-    var hasBeforeWar9YesOldLiveData = MutableLiveData(blank.hasBeforeWar9LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerOrganizationNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.organization == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar9LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            if (it) blank.currentOwner.organization = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
         }
     }
-    var hasBeforeWar9NoLiveData = MutableLiveData(blank.hasBeforeWar9LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerOrganizationNonLiveData = MutableLiveData(blank.currentOwner.organization == Blank.Owner.OwnerEnum.NONE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar9LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            if (it) blank.currentOwner.organization = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerOrganizationPriceLiveData = MutableLiveData(blank.currentOwner.organizationCoast).apply {
+        observeForever {
+            blank.currentOwner.organizationCoast = it
+        }
+    }
+    var currentOwnerOrganizationSquareLiveData = MutableLiveData(blank.currentOwner.organizationSquare).apply {
+        observeForever {
+            blank.currentOwner.organizationSquare = it
+        }
+    }
+    var currentOwnerOrganizationCountLiveData = MutableLiveData(blank.currentOwner.organizationCount).apply {
+        observeForever {
+            blank.currentOwner.organizationCount = it
         }
     }
 
-    var hasBeforeWar10YesNewLiveData = MutableLiveData(blank.hasBeforeWar10LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var currentOwnerPlaceMineLiveData = MutableLiveData(blank.currentOwner.place == Blank.Owner.OwnerEnum.MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar10LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.currentOwner.place = Blank.Owner.OwnerEnum.MINE.type
         }
     }
-    var hasBeforeWar10YesOldLiveData = MutableLiveData(blank.hasBeforeWar10LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+    var currentOwnerPlaceNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.place == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar10LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type)
+            if (it) blank.currentOwner.place = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
         }
     }
-    var hasBeforeWar10NoLiveData = MutableLiveData(blank.hasBeforeWar10LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+    var currentOwnerPlaceNonLiveData = MutableLiveData(blank.currentOwner.place == Blank.Owner.OwnerEnum.NONE.type).apply {
         observeForever {
-            if (it) blank.hasBeforeWar10LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type)
+            if (it) blank.currentOwner.place = Blank.Owner.OwnerEnum.NONE.type
         }
     }
-    var hasBeforeWarOtherLiveData = blank.hasBeforeWarOtherLiveData
+    var currentOwnerPlacePriceLiveData = MutableLiveData(blank.currentOwner.placeCoast).apply {
+        observeForever {
+            blank.currentOwner.placeCoast = it
+        }
+    }
+    var currentOwnerPlaceSquareLiveData = MutableLiveData(blank.currentOwner.placeSquare).apply {
+        observeForever {
+            blank.currentOwner.placeSquare = it
+        }
+    }
+    var currentOwnerPlaceCountLiveData = MutableLiveData(blank.currentOwner.placeCount).apply {
+        observeForever {
+            blank.currentOwner.placeCount = it
+        }
+    }
+
+    var currentOwnerMoneyMineLiveData = MutableLiveData(blank.currentOwner.money == Blank.Owner.OwnerEnum.MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.money = Blank.Owner.OwnerEnum.MINE.type
+        }
+    }
+    var currentOwnerMoneyNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.money == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.money = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
+        }
+    }
+    var currentOwnerMoneyNonLiveData = MutableLiveData(blank.currentOwner.money == Blank.Owner.OwnerEnum.NONE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.money = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerMoneyPriceLiveData = MutableLiveData(blank.currentOwner.moneyCoast).apply {
+        observeForever {
+            blank.currentOwner.moneyCoast = it
+        }
+    }
+    var currentOwnerMoneyCountLiveData = MutableLiveData(blank.currentOwner.moneyCount).apply {
+        observeForever {
+            blank.currentOwner.moneyCount = it
+        }
+    }
+
+    var currentOwnerAvandMineLiveData = MutableLiveData(blank.currentOwner.avand == Blank.Owner.OwnerEnum.MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.avand = Blank.Owner.OwnerEnum.MINE.type
+        }
+    }
+    var currentOwnerAvandNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.avand == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.avand = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
+        }
+    }
+    var currentOwnerAvandNonLiveData = MutableLiveData(blank.currentOwner.avand == Blank.Owner.OwnerEnum.NONE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.avand = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerAvandPriceLiveData = MutableLiveData(blank.currentOwner.avandCoast).apply {
+        observeForever {
+            blank.currentOwner.avandCoast = it
+        }
+    }
+    var currentOwnerAvandCountLiveData = MutableLiveData(blank.currentOwner.avandCount).apply {
+        observeForever {
+            blank.currentOwner.avandCount = it
+        }
+    }
+
+    var currentOwnerHipotekMineLiveData = MutableLiveData(blank.currentOwner.hipotek == Blank.Owner.OwnerEnum.MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.hipotek = Blank.Owner.OwnerEnum.MINE.type
+        }
+    }
+    var currentOwnerHipotekNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.hipotek == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.hipotek = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
+        }
+    }
+    var currentOwnerHipotekNonLiveData = MutableLiveData(blank.currentOwner.hipotek == Blank.Owner.OwnerEnum.NONE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.hipotek = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerHipotekPriceLiveData = MutableLiveData(blank.currentOwner.hipotekCoast).apply {
+        observeForever {
+            blank.currentOwner.hipotekCoast = it
+        }
+    }
+    var currentOwnerHipotekCountLiveData = MutableLiveData(blank.currentOwner.hipotekCount).apply {
+        observeForever {
+            blank.currentOwner.hipotekCount = it
+        }
+    }
+
+    var currentOwnerGoldsMineLiveData = MutableLiveData(blank.currentOwner.golds == Blank.Owner.OwnerEnum.MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.golds = Blank.Owner.OwnerEnum.MINE.type
+        }
+    }
+    var currentOwnerGoldsNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.golds == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.golds = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
+        }
+    }
+    var currentOwnerGoldsNonLiveData = MutableLiveData(blank.currentOwner.golds == Blank.Owner.OwnerEnum.NONE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.golds = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerGoldsPriceLiveData = MutableLiveData(blank.currentOwner.goldsCoast).apply {
+        observeForever {
+            blank.currentOwner.goldsCoast = it
+        }
+    }
+    var currentOwnerGoldsCountLiveData = MutableLiveData(blank.currentOwner.goldsCount).apply {
+        observeForever {
+            blank.currentOwner.goldsCount = it
+        }
+    }
+
+    var currentOwnerArjetuxtMineLiveData = MutableLiveData(blank.currentOwner.arjetuxt == Blank.Owner.OwnerEnum.MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.arjetuxt = Blank.Owner.OwnerEnum.MINE.type
+        }
+    }
+    var currentOwnerArjetuxtNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.arjetuxt == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.arjetuxt = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
+        }
+    }
+    var currentOwnerArjetuxtNonLiveData = MutableLiveData(blank.currentOwner.arjetuxt == Blank.Owner.OwnerEnum.NONE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.arjetuxt = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerArjetuxtPriceLiveData = MutableLiveData(blank.currentOwner.arjetuxtCoast).apply {
+        observeForever {
+            blank.currentOwner.arjetuxtCoast = it
+        }
+    }
+    var currentOwnerArjetuxtCountLiveData = MutableLiveData(blank.currentOwner.arjetuxtCount).apply {
+        observeForever {
+            blank.currentOwner.arjetuxtCount = it
+        }
+    }
+
+    var currentOwnerOtherMineLiveData = MutableLiveData(blank.currentOwner.other == Blank.Owner.OwnerEnum.MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.other = Blank.Owner.OwnerEnum.MINE.type
+        }
+    }
+    var currentOwnerOtherNotOnlyMineLiveData = MutableLiveData(blank.currentOwner.other == Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.other = Blank.Owner.OwnerEnum.NOT_ONLY_MINE.type
+        }
+    }
+    var currentOwnerOtherNonLiveData = MutableLiveData(blank.currentOwner.other == Blank.Owner.OwnerEnum.NONE.type).apply {
+        observeForever {
+            if (it) blank.currentOwner.other = Blank.Owner.OwnerEnum.NONE.type
+        }
+    }
+    var currentOwnerOtherNameLiveData = MutableLiveData(blank.currentOwner.otherName).apply {
+        observeForever {
+            blank.currentOwner.otherName = it
+        }
+    }
+    var currentOwnerOtherPriceLiveData = MutableLiveData(blank.currentOwner.otherCoast).apply {
+        observeForever {
+            blank.currentOwner.otherCoast = it
+        }
+    }
+    var currentOwnerOtherSquareLiveData = MutableLiveData(blank.currentOwner.otherSquare).apply {
+        observeForever {
+            blank.currentOwner.otherSquare = it
+        }
+    }
+    var currentOwnerOtherCountLiveData = MutableLiveData(blank.currentOwner.otherCount).apply {
+        observeForever {
+            blank.currentOwner.otherCount = it
+        }
+    }
+
+    var hasBeforeWar1YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field1 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field1 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar1YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field1 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field1 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar1NoLiveData = MutableLiveData(blank.hasBeforeWar.field1 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field1 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar2YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field2 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field2 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar2YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field2 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field2 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar2NoLiveData = MutableLiveData(blank.hasBeforeWar.field2 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field2 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar3YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field3 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field3 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar3YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field3 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field3 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar3NoLiveData = MutableLiveData(blank.hasBeforeWar.field3 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field3 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar4YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field4 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field4 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar4YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field4 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field4 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar4NoLiveData = MutableLiveData(blank.hasBeforeWar.field4 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field4 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar5YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field5 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field5 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar5YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field5 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field5 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar5NoLiveData = MutableLiveData(blank.hasBeforeWar.field5 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field5 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar6YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field6 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field6 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar6YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field6 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field6 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar6NoLiveData = MutableLiveData(blank.hasBeforeWar.field6 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field6 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar7YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field7 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field7 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar7YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field7 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field7 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar7NoLiveData = MutableLiveData(blank.hasBeforeWar.field7 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field7 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar8YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field8 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field8 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar8YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field8 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field8 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar8NoLiveData = MutableLiveData(blank.hasBeforeWar.field8 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field8 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar9YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field9 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field9 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar9YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field9 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field9 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar9NoLiveData = MutableLiveData(blank.hasBeforeWar.field9 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field9 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+
+    var hasBeforeWar10YesNewLiveData = MutableLiveData(blank.hasBeforeWar.field10 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field10 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var hasBeforeWar10YesOldLiveData = MutableLiveData(blank.hasBeforeWar.field10 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field10 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_OLD.type
+        }
+    }
+    var hasBeforeWar10NoLiveData = MutableLiveData(blank.hasBeforeWar.field10 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type).apply {
+        observeForever {
+            if (it) blank.hasBeforeWar.field10 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.NO.type
+        }
+    }
+    var hasBeforeWarOtherLiveData = MutableLiveData(blank.hasBeforeWar.other).apply {
+        observeForever {
+            blank.hasBeforeWar.other = it
+        }
+    }
 
 }

@@ -10,6 +10,8 @@ import androidx.lifecycle.MutableLiveData
 import com.example.questionaryartsakh.Blank
 import com.example.questionaryartsakh.R
 import com.google.gson.Gson
+import java.text.SimpleDateFormat
+import java.util.*
 
 fun View.invisible() {
     visibility = View.INVISIBLE
@@ -40,14 +42,10 @@ object ViewExtansions {
     fun setStatus(anyView: TextView, id: Int) {
         when (id) {
             1 -> {
-                anyView.text = "Թերի լրացված"
+                anyView.text = "Չուղարկված"
                 anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.not_fill))
             }
             2 -> {
-                anyView.text = "Լրացված"
-                anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.fill))
-            }
-            3 -> {
                 anyView.text = "Ուղարկված"
                 anyView.setTextColor(ContextCompat.getColor(anyView.context, R.color.sent))
             }
@@ -63,17 +61,31 @@ object ViewExtansions {
         }
     }
 
+    @BindingAdapter("app:date")
+    @JvmStatic
+    fun bindDateToString(anyView: TextView, value: Long?) {
+        value?.let {
+            val format = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale("hy", "AM")).apply {
+                timeZone = TimeZone.getTimeZone("GMT+04:00")
+            }
+            anyView.text = format.format(Date(value))
+        }
+    }
+
 }
 
 fun Blank.Languages.toJson(): String {
     return Gson().toJson(this)
 }
+
 fun Blank.Owner.toJson(): String {
     return Gson().toJson(this)
 }
+
 fun Blank.SubFieldsMultiple.toJson(): String {
     return Gson().toJson(this)
 }
+
 fun Blank.SubFields.toJson(): String {
     return Gson().toJson(this)
 }

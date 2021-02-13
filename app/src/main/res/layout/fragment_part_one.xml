@@ -51,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Օր-կ +37455555555"
-                    android:inputType="numberDecimal"
+                    android:inputType="phone"
                     android:text="@={vModel.telLiveData}" />
 
                 <TextView
@@ -65,7 +65,7 @@
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
+                    android:inputType="phone"
                     android:hint="Օր-կ՝ 21.07.1992"
                     android:text="@={vModel.dateLiveData}" />
 
@@ -94,7 +94,7 @@
                     style="@style/InputStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
+                    android:inputType="phone"
                     android:hint="Օր-կ՝ 21.07.1992"
                     android:text="@={vModel.dateOfBirthDayLiveData}" />
 

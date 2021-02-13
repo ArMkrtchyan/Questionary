@@ -9,162 +9,350 @@ class PartSixViewModel : ViewModel() {
 
     private val blank = BlankApp.getInstance().getBlank()
 
-    var home1LiveData = blank.home1LiveData
-    var home2LiveData = blank.home2LiveData
-    var homeOtherFieldLiveData = blank.homeOtherFieldLiveData
-    var homeOtherLiveData = blank.homeOtherLiveData
-
-    var owning1YesNewLiveData = MutableLiveData(blank.owning1LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var home1LiveData = MutableLiveData(blank.home.field1).apply {
         observeForever {
-            if (it) blank.owning1LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            blank.home.field1 = it
         }
     }
-    var owning1YesOldLiveData = MutableLiveData(blank.owning1LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var home2LiveData = MutableLiveData(blank.home.field2).apply {
         observeForever {
-            if (it) blank.owning1LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            blank.home.field2 = it
         }
     }
-    var owning1NoLiveData = MutableLiveData(blank.owning1LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var homeOtherFieldLiveData = MutableLiveData(blank.home.other).apply {
         observeForever {
-            if (it) blank.owning1LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            blank.home.other = it
         }
     }
 
-    var owning2YesNewLiveData = MutableLiveData(blank.owning2LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var homeOtherLiveData = MutableLiveData(blank.homeOther).apply {
         observeForever {
-            if (it) blank.owning2LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var owning2YesOldLiveData = MutableLiveData(blank.owning2LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning2LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var owning2NoLiveData = MutableLiveData(blank.owning2LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning2LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            blank.homeOther = it
         }
     }
 
-    var owning3YesNewLiveData = MutableLiveData(blank.owning3LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning1YesNewLiveData = MutableLiveData(blank.owning.field1 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owning3LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field1 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owning3YesOldLiveData = MutableLiveData(blank.owning3LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning1YesOldLiveData = MutableLiveData(blank.owning.field1 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owning3LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field1 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owning3NoLiveData = MutableLiveData(blank.owning3LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning1NoLiveData = MutableLiveData(blank.owning.field1 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owning3LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-
-    var owning4YesNewLiveData = MutableLiveData(blank.owning4LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning4LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var owning4YesOldLiveData = MutableLiveData(blank.owning4LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning4LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var owning4NoLiveData = MutableLiveData(blank.owning4LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning4LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field1 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
 
-    var owning5YesNewLiveData = MutableLiveData(blank.owning5LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning2YesNewLiveData = MutableLiveData(blank.owning.field2 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owning5LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field2 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owning5YesOldLiveData = MutableLiveData(blank.owning5LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning2YesOldLiveData = MutableLiveData(blank.owning.field2 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owning5LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field2 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owning5NoLiveData = MutableLiveData(blank.owning5LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning2NoLiveData = MutableLiveData(blank.owning.field2 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owning5LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-
-    var owning6YesNewLiveData = MutableLiveData(blank.owning6LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning6LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var owning6YesOldLiveData = MutableLiveData(blank.owning6LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning6LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
-        }
-    }
-    var owning6NoLiveData = MutableLiveData(blank.owning6LiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
-        observeForever {
-            if (it) blank.owning6LiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field2 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
 
-    var owningOtherYesNewLiveData = MutableLiveData(blank.owningOtherFieldLiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning3YesNewLiveData = MutableLiveData(blank.owning.field3 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owningOtherFieldLiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field3 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owningOtherYesOldLiveData = MutableLiveData(blank.owningOtherFieldLiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning3YesOldLiveData = MutableLiveData(blank.owning.field3 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owningOtherFieldLiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field3 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owningOtherNoLiveData = MutableLiveData(blank.owningOtherFieldLiveData.value == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+    var owning3NoLiveData = MutableLiveData(blank.owning.field3 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
         observeForever {
-            if (it) blank.owningOtherFieldLiveData.postValue(Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type)
+            if (it) blank.owning.field3 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
         }
     }
-    var owningOtherLiveData = blank.owningOtherLiveData
 
-    var willLivePlace1LiveData = blank.willLivePlace1LiveData
-    var willLivePlace2LiveData = blank.willLivePlace2LiveData
-    var willLivePlaceArcakhOtherLiveData = blank.willLivePlaceArcakhOtherLiveData
-    var willLivePlace3LiveData = blank.willLivePlace3LiveData
-    var willLivePlaceTemporaryArmeniaLiveData = blank.willLivePlaceTemporaryArmeniaLiveData
-    var willLivePlace4LiveData = blank.willLivePlace4LiveData
-    var willLivePlaceArmeniaLiveData = blank.willLivePlaceArmeniaLiveData
-    var willLivePlace5LiveData = blank.willLivePlace5LiveData
-    var willLivePlace6LiveData = blank.willLivePlace6LiveData
-    var willLivePlace7LiveData = blank.willLivePlace7LiveData
-    var willLivePlaceAPHLiveData = blank.willLivePlaceAPHLiveData
-    var willLivePlace8LiveData = blank.willLivePlace8LiveData
-    var willLivePlaceEuropeLiveData = blank.willLivePlaceEuropeLiveData
-    var willLivePlace9LiveData = blank.willLivePlace9LiveData
-    var willLivePlaceOtherFieldLiveData = blank.willLivePlaceOtherFieldLiveData
-    var willLivePlaceOtherLiveData = blank.willLivePlaceOtherLiveData
-    var futurePlans1LiveData = blank.futurePlans1LiveData
-    var futurePlans2LiveData = blank.futurePlans2LiveData
-    var futurePlans3LiveData = blank.futurePlans3LiveData
-    var alreadyWorkLiveData = blank.alreadyWorkLiveData
-    var futurePlans4LiveData = blank.futurePlans4LiveData
-    var futurePlans5LiveData = blank.futurePlans5LiveData
-    var futurePlansOtherFieldLiveData = blank.futurePlansOtherFieldLiveData
-    var futurePlansOtherLiveData = blank.futurePlansOtherLiveData
-    var passport1LiveData = blank.passport1LiveData
-    var passport2LiveData = blank.passport2LiveData
-    var passport3LiveData = blank.passport3LiveData
-    var passportOtherFieldLiveData = blank.passportOtherFieldLiveData
-    var passportOtherLiveData = blank.passportOtherLiveData
-    var maried1LiveData = blank.maried1LiveData
-    var maried2LiveData = blank.maried2LiveData
-    var maried3LiveData = blank.maried3LiveData
-    var maried4LiveData = blank.maried4LiveData
-    var maried5LiveData = blank.maried5LiveData
-    var mariedOtherFieldLiveData = blank.mariedOtherFieldLiveData
-    var mariedOtherLiveData = blank.mariedOtherLiveData
-    var yearsLiveData = blank.yearsLiveData
-    var gender1LiveData = blank.gender1LiveData
-    var gender2LiveData = blank.gender2LiveData
-    var otherLiveData = blank.otherLiveData
+    var owning4YesNewLiveData = MutableLiveData(blank.owning.field4 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field4 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owning4YesOldLiveData = MutableLiveData(blank.owning.field4 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field4 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owning4NoLiveData = MutableLiveData(blank.owning.field4 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field4 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+
+    var owning5YesNewLiveData = MutableLiveData(blank.owning.field5 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field5 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owning5YesOldLiveData = MutableLiveData(blank.owning.field5 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field5 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owning5NoLiveData = MutableLiveData(blank.owning.field5 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field5 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+
+    var owning6YesNewLiveData = MutableLiveData(blank.owning.field6 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field6 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owning6YesOldLiveData = MutableLiveData(blank.owning.field6 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field6 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owning6NoLiveData = MutableLiveData(blank.owning.field6 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field6 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+
+    var owningOtherYesNewLiveData = MutableLiveData(blank.owning.field7 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field7 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owningOtherYesOldLiveData = MutableLiveData(blank.owning.field7 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field7 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+    var owningOtherNoLiveData = MutableLiveData(blank.owning.field7 == Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type).apply {
+        observeForever {
+            if (it) blank.owning.field7 = Blank.SubFieldsMultiple.SubFieldsMultipleEnum.YES_NEW.type
+        }
+    }
+
+    var owningOtherLiveData = MutableLiveData(blank.owningNowOther).apply {
+        observeForever {
+            blank.owningNowOther = it
+        }
+    }
+
+    var willLivePlace1LiveData = MutableLiveData(blank.willLivePlace.field1).apply {
+        observeForever {
+            blank.willLivePlace.field1 = it
+        }
+    }
+    var willLivePlace2LiveData = MutableLiveData(blank.willLivePlace.field2).apply {
+        observeForever {
+            blank.willLivePlace.field2 = it
+        }
+    }
+    var willLivePlaceArcakhOtherLiveData = MutableLiveData(blank.willLivePlaceArcakhOther).apply {
+        observeForever {
+            blank.willLivePlaceArcakhOther = it
+        }
+    }
+    var willLivePlace3LiveData = MutableLiveData(blank.willLivePlace.field3).apply {
+        observeForever {
+            blank.willLivePlace.field3 = it
+        }
+    }
+    var willLivePlaceTemporaryArmeniaLiveData = MutableLiveData(blank.willLivePlaceTemporaryArmenia).apply {
+        observeForever {
+            blank.willLivePlaceTemporaryArmenia = it
+        }
+    }
+    var willLivePlace4LiveData = MutableLiveData(blank.willLivePlace.field4).apply {
+        observeForever {
+            blank.willLivePlace.field4 = it
+        }
+    }
+    var willLivePlaceArmeniaLiveData = MutableLiveData(blank.willLivePlaceArmenia).apply {
+        observeForever {
+            blank.willLivePlaceArmenia = it
+        }
+    }
+    var willLivePlace5LiveData = MutableLiveData(blank.willLivePlace.field5).apply {
+        observeForever {
+            blank.willLivePlace.field5 = it
+        }
+    }
+    var willLivePlace6LiveData = MutableLiveData(blank.willLivePlace.field6).apply {
+        observeForever {
+            blank.willLivePlace.field6 = it
+        }
+    }
+    var willLivePlace7LiveData = MutableLiveData(blank.willLivePlace.field7).apply {
+        observeForever {
+            blank.willLivePlace.field7 = it
+        }
+    }
+    var willLivePlaceAPHLiveData = MutableLiveData(blank.willLivePlaceAPH).apply {
+        observeForever {
+            blank.willLivePlaceAPH = it
+        }
+    }
+    var willLivePlace8LiveData = MutableLiveData(blank.willLivePlace.field8).apply {
+        observeForever {
+            blank.willLivePlace.field8 = it
+        }
+    }
+    var willLivePlaceEuropeLiveData = MutableLiveData(blank.willLivePlaceEurope).apply {
+        observeForever {
+            blank.willLivePlaceEurope = it
+        }
+    }
+    var willLivePlace9LiveData = MutableLiveData(blank.willLivePlace.field9).apply {
+        observeForever {
+            blank.willLivePlace.field9 = it
+        }
+    }
+
+    var willLivePlaceOtherFieldLiveData = MutableLiveData(blank.willLivePlace.other).apply {
+        observeForever {
+            blank.willLivePlace.other = it
+        }
+    }
+    var willLivePlaceOtherLiveData = MutableLiveData(blank.owning.other).apply {
+        observeForever {
+            blank.owning.other = it
+        }
+    }
+    var futurePlans1LiveData = MutableLiveData(blank.futurePlans.field1).apply {
+        observeForever {
+            blank.futurePlans.field1 = it
+        }
+    }
+    var futurePlans2LiveData = MutableLiveData(blank.futurePlans.field2).apply {
+        observeForever {
+            blank.futurePlans.field2 = it
+        }
+    }
+    var futurePlans3LiveData = MutableLiveData(blank.futurePlans.field3).apply {
+        observeForever {
+            blank.futurePlans.field3 = it
+        }
+    }
+    var alreadyWorkLiveData = MutableLiveData(blank.alreadyWork).apply {
+        observeForever {
+            blank.alreadyWork = it
+        }
+    }
+    var futurePlans4LiveData = MutableLiveData(blank.futurePlans.field4).apply {
+        observeForever {
+            blank.futurePlans.field4 = it
+        }
+    }
+    var futurePlans5LiveData = MutableLiveData(blank.futurePlans.field5).apply {
+        observeForever {
+            blank.futurePlans.field5 = it
+        }
+    }
+    var futurePlansOtherFieldLiveData = MutableLiveData(blank.futurePlans.other).apply {
+        observeForever {
+            blank.futurePlans.other = it
+        }
+    }
+    var futurePlansOtherLiveData = MutableLiveData(blank.futurePlansOther).apply {
+        observeForever {
+            blank.futurePlansOther = it
+        }
+    }
+
+    var passport1LiveData = MutableLiveData(blank.passport.field1).apply {
+        observeForever {
+            blank.passport.field1 = it
+        }
+    }
+    var passport2LiveData = MutableLiveData(blank.passport.field2).apply {
+        observeForever {
+            blank.passport.field2 = it
+        }
+    }
+    var passport3LiveData = MutableLiveData(blank.passport.field3).apply {
+        observeForever {
+            blank.passport.field3 = it
+        }
+    }
+    var passportOtherFieldLiveData = MutableLiveData(blank.passport.other).apply {
+        observeForever {
+            blank.passport.other = it
+        }
+    }
+    var passportOtherLiveData = MutableLiveData(blank.passportOther).apply {
+        observeForever {
+            blank.passportOther = it
+        }
+    }
+
+    var maried1LiveData = MutableLiveData(blank.maried.field1).apply {
+        observeForever {
+            blank.maried.field1 = it
+        }
+    }
+    var maried2LiveData = MutableLiveData(blank.maried.field2).apply {
+        observeForever {
+            blank.maried.field2 = it
+        }
+    }
+    var maried3LiveData = MutableLiveData(blank.maried.field3).apply {
+        observeForever {
+            blank.maried.field3 = it
+        }
+    }
+    var maried4LiveData = MutableLiveData(blank.maried.field4).apply {
+        observeForever {
+            blank.maried.field4 = it
+        }
+    }
+    var maried5LiveData = MutableLiveData(blank.maried.field5).apply {
+        observeForever {
+            blank.maried.field5 = it
+        }
+    }
+    var mariedOtherFieldLiveData = MutableLiveData(blank.maried.other).apply {
+        observeForever {
+            blank.maried.other = it
+        }
+    }
+    var mariedOtherLiveData = MutableLiveData(blank.mariedOther).apply {
+        observeForever {
+            blank.mariedOther = it
+        }
+    }
+    var yearsLiveData = MutableLiveData(blank.years).apply {
+        observeForever {
+            blank.years = it
+        }
+    }
+
+    var gender1LiveData = MutableLiveData(blank.gender.field1).apply {
+        observeForever {
+            blank.gender.field1 = it
+        }
+    }
+    var gender2LiveData = MutableLiveData(blank.gender.field2).apply {
+        observeForever {
+            blank.gender.field2 = it
+        }
+    }
+
+    var otherLiveData = MutableLiveData(blank.other).apply {
+        observeForever {
+            blank.other = it
+        }
+    }
+
 }

@@ -26,6 +26,7 @@ class AdapterBlanks(val fEdit: (Blank) -> Unit, val fSend: (Blank) -> Unit, val 
     }
 
     override fun onBindViewHolder(holder: BlankViewHolder, position: Int) {
+        holder.setIsRecyclable(false)
         holder.mBinding.apply {
             blank = getItem(position)
             root.setOnClickListener { fShow.invoke(getItem(position)) }

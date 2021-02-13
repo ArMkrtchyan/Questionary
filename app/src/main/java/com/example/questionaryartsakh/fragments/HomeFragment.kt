@@ -13,6 +13,7 @@ import com.example.questionaryartsakh.AdapterBlanks
 import com.example.questionaryartsakh.Blank
 import com.example.questionaryartsakh.BlankApp
 import com.example.questionaryartsakh.database.BlankRepository
+import com.example.questionaryartsakh.database.entity.BlankEntity
 import com.example.questionaryartsakh.databinding.FragmentHomeBinding
 import com.example.questionaryartsakh.utils.DialogUtil
 import com.google.gson.Gson
@@ -22,6 +23,11 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
+
+    companion object {
+
+        var isEditMode = false
+    }
 
     private lateinit var mBinding: FragmentHomeBinding
 
@@ -55,19 +61,23 @@ class HomeFragment : Fragment() {
         super.onResume()
         BlankApp.getInstance().releaseBlank()
         lifecycleScope.launch {
+            isEditMode = false
             repository.findAllBlanks {
                 it.collect { list ->
+                    mBinding.isEmpty = list.isEmpty()
                     adapter.submitList(ArrayList<Blank>().apply {
                         mBlanks.clear()
                         mBlanks.addAll(list)
                         addAll(mBlanks)
                     })
+                    adapter.notifyDataSetChanged()
                 }
             }
         }
     }
 
     private fun edit(blank: Blank) {
+        isEditMode = true
         BlankApp.getInstance().setBlank(blank)
         view?.findNavController()?.navigate(HomeFragmentDirections.actionHomeFragmentToPartOneFragment())
     }
@@ -84,11 +94,24 @@ class HomeFragment : Fragment() {
         }
     }
 
+    @ExperimentalCoroutinesApi
     private fun delete(blank: Blank) {
-        val description =
-            if (blank.status != 3) "Դուք դեռ չեք ուղարկել հարցաթերթիկը։ Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը:" else "Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը"
+        val description = if (blank.status != 3) "Դուք դեռ չեք ուղարկել հարցաթերթիկը։ Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը:" else "Համողվա՞ծ եք, որ ցանկանում եք հեռացնել հարցաթերթիկը"
         DialogUtil.deleteDialog(requireActivity(), description) {
-            adapter.submitList(ArrayList<Blank>().apply { addAll(mBlanks.apply { remove(blank) }) })
+            lifecycleScope.launch {
+                repository.deleteBlank(BlankEntity(id = blank.id, blankJson = blank.toJson())) {
+                    it.collect { list ->
+                        mBinding.isEmpty = list.isEmpty()
+
+                        adapter.submitList(ArrayList<Blank>().apply {
+                            mBlanks.clear()
+                            mBlanks.addAll(list)
+                            addAll(mBlanks)
+                        })
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+            }
         }
     }
 

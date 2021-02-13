@@ -108,7 +108,7 @@
             app:launchSingleTop="true"
             app:popEnterAnim="@anim/fragment_anim_fade_in"
             app:popExitAnim="@anim/fragment_anim_fade_out"
-            app:popUpTo="@layout/fragment_home"
+            app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
     </fragment>
 </navigation>

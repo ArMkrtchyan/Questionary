@@ -20,7 +20,7 @@ class BlankRepository {
         mFlow(flow {
             val blanks = arrayListOf<Blank>()
             blankDao.getAllBlanks().map {
-                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java))
+                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java).apply { id = it.id })
             }
             emit(blanks)
         }.onStart {
@@ -32,7 +32,7 @@ class BlankRepository {
         mFlow(flow {
             val blanks = arrayListOf<Blank>()
             blankDao.getAllBlanks().map {
-                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java))
+                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java).apply { id = it.id })
             }
             emit(blanks)
         }.flowOn(Dispatchers.IO))
@@ -46,15 +46,15 @@ class BlankRepository {
         }.flowOn(Dispatchers.IO))
     }
 
-    suspend fun deleteBlank(Blank: BlankEntity, mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
+    suspend fun deleteBlank(blank: BlankEntity, mFlow: suspend (Flow<ArrayList<Blank>>) -> Unit) {
         mFlow(flow {
             val blanks = arrayListOf<Blank>()
             blankDao.getAllBlanks().map {
-                blanks.add(Gson().fromJson(it.blankJson, com.example.questionaryartsakh.Blank::class.java))
+                blanks.add(Gson().fromJson(it.blankJson, Blank::class.java).apply { id = it.id })
             }
             emit(blanks)
         }.onStart {
-            blankDao.deleteBlank(Blank)
+            blankDao.deleteBlank(blank)
         }.flowOn(Dispatchers.IO))
 
     }

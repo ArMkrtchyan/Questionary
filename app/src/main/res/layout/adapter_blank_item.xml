@@ -27,7 +27,7 @@
             android:layout_height="0.6dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimaryDisabled"
-            app:layout_constraintTop_toBottomOf="@id/date" />
+            app:layout_constraintTop_toBottomOf="@id/createdDate" />
 
         <View
             android:id="@+id/line2"
@@ -43,23 +43,37 @@
             android:layout_marginStart="10dp"
             android:padding="10dp"
             android:text="@{blank.fullName}"
-            tools:text="Արշակ Մկրտչյան"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/line1" />
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            tools:text="Արշակ Մկրտչյան" />
 
 
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/createdDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="10dp"
             android:textColor="#818080"
             android:textSize="12sp"
+            app:date="@{blank.createdAt}"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/status"
+            tools:text="21.07.1992" />
+
+        <TextView
+            android:id="@+id/sentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="#818080"
+            android:textSize="12sp"
+            app:date="@{blank.sentAt}"
+            app:layout_constraintStart_toEndOf="@id/createdDate"
             app:layout_constraintTop_toBottomOf="@id/status"
             tools:text="21.07.1992" />
 
@@ -101,12 +115,12 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
-            android:text="@{blank.telephone}"
-            tools:text="Հեռ՝ +37493876378"
+            android:text='@{"Հեռ՝ " + blank.telephone}'
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/name" />
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="Հեռ՝ +37493876378" />
 
         <TextView
             android:id="@+id/place"
@@ -117,12 +131,12 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
-            android:text="@{blank.birthPlace}"
-            tools:text="Ծննդավայր՝ ԱՀ, ք․ Ստեփանակարտ"
+            android:text='@{"Ծննդավայր՝ " + blank.birthPlace}'
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tel" />
+            app:layout_constraintTop_toBottomOf="@id/tel"
+            tools:text="Ծննդավայր՝ ԱՀ, ք․ Ստեփանակարտ" />
 
         <TextView
             android:id="@+id/edit"
@@ -147,8 +161,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@{blank.status==2 ? @drawable/btn_background : @drawable/btn_background_disabled }"
-            android:enabled="@{blank.status==2}"
+            android:background="@{blank.status==1 ? @drawable/btn_background : @drawable/btn_background_disabled }"
+            android:enabled="@{blank.status==1}"
             android:gravity="center"
             android:padding="10dp"
             android:text="Ուղարկել"
